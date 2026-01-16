@@ -22,4 +22,7 @@ export interface UserComfortProfile {
   touchTypePreference: ('context-initiated' | 'self-initiated' | 'structured' | 'spontaneous')[];
   dealBreakers: string[];
   goals: ('socialize' | 'learn' | 'relax' | 'exercise' | 'connect' | 'escape')[];
+  alcoholPreference: 'sober-only' | 'some' | 'any';
+  budgetLevel: 1 | 2 | 3 | 4 | 5;
+  seasonalPreference: 'cheaper' | 'any' | 'specific';
 }

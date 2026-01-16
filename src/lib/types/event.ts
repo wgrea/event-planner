@@ -1,4 +1,13 @@
 // src/lib/types/event.ts
+// Share this before adding more data
+
+export interface NicheWorld {
+  unwrittenRules: string[];
+  socialCurrency: string[];
+  entryBarriers: string[];
+  tabooTopics?: string[];
+  initiationRituals?: string[];
+}
 
 export interface SocialEventType {
   id: string;
@@ -15,6 +24,12 @@ export interface SocialEventType {
   tips: string[];
   commonMyths: string[];
   redFlags: string[];
+  socialRules?: SocialRules;
+  touchDetails?: TouchDetails;
+  soloTips?: SoloTips;
+  logistics?: EventLogistics;
+  seasonalPricing?: SeasonalPricing;
+  nicheWorld?: NicheWorld;
 }
 
 export interface EventComparison {
@@ -24,11 +39,11 @@ export interface EventComparison {
 
 export type EventCategory = 
   | 'hobby' | 'dance' | 'volunteer' | 'music' 
-  | 'movement' | 'gaming' | 'casual' | 'professional'
+  | 'movement' | 'gaming' | 'professional'
   | 'sports' | 'entertainment' | 'educational' | 'food-drink'
-  | 'outdoors' | 'creative' | 'fitness' | 'special-interest'
+  | 'outdoors' | 'creative' | 'special-interest'
   | 'animal' | 'dating' | 'social' | 'technology' | 'wellness'
-  | 'cultural';
+  | 'cultural'| 'nightlife'| 'bar-events'| 'conventions' // ADD THIS;
 
 export interface PressureProfile {
   level: PressureLevel;
@@ -54,6 +69,62 @@ export interface TouchProfile {
   boundaries: string[];
 }
 
+export interface SeasonalPricing {
+  cheaperMonths: string[]; // ['Jan', 'Feb', 'Sep']
+  expensiveMonths: string[];
+  priceNotes?: string;
+}
+
+export interface SocialRules {
+  unwrittenRules: string[];
+  entryBarriers: string[];
+  socialCurrency: string[];
+  tabooTopics: string[];
+  insideJokes?: string;
+}
+
+export interface TouchDetails {
+  howPeopleTouch: string[];
+  proximityLevel: 1 | 2 | 3 | 4;
+  initiation: string; // How touch is initiated
+  whyNoTouch?: string; // Optional for non-touch events
+}
+
+export interface SoloTips {
+  howToGoSolo: string[];
+  bestPosition: string; // 'Near hosts', 'At the bar', 'Observation corner'
+  escapePlan: string;
+  forLocals?: string;    // "Mention your neighborhood..."
+  forTravelers?: string; // "Ask for recommendations..."
+  icebreaker?: string;   // Specific conversation starter
+}
+
+export interface EventLogistics {
+  ticketSources: string[];
+  parking: ParkingInfo;
+  transit?: string;
+  alcohol?: AlcoholInfo;
+}
+
+export interface ParkingInfo {
+  type: 'free' | 'paid' | 'mixed' | 'difficult';
+  details?: string;
+}
+
+export interface AlcoholInfo {
+  likelihood: 'none' | 'low' | 'medium' | 'high';
+  priceLevel: 1 | 2 | 3 | 4 | 5; // $ to $$$$$
+  byoAllowed?: boolean;
+}
+
+export interface NicheWorld {
+  unwrittenRules: string[];
+  socialCurrency: string[];
+  entryBarriers: string[];
+  tabooTopics?: string[];
+  initiationRituals?: string[];
+}
+
 export type TouchLevel = 'none' | 'low' | 'moderate' | 'high' | 'varies'; // Added 'varies'
 
 // Updated TouchType definition:
@@ -65,16 +136,18 @@ export type TouchType =
   | 'consensual'
   | 'professional' 
   | 'task-related'
-  | 'animal-mediated' // NEW
-  | 'animal-focused' // NEW
-  | 'cultural' // NEW
-  | 'social' // NEW
-  | 'activity-dependent' // NEW
-  | 'incidental' // NEW
-  | 'task-focused' // NEW (alias for task-related)
-  | 'assistance-based' // NEW
-  | 'observational' // NEW
-  | 'familiar' // NEW
-  | 'therapeutic' // NEW
-  | 'creative' // NEW
-  | 'respectful'; // NEW
+  | 'animal-mediated' 
+  | 'animal-focused' 
+  | 'cultural' 
+  | 'social' 
+  | 'activity-dependent' 
+  | 'incidental' 
+  | 'task-focused' 
+  | 'assistance-based' 
+  | 'observational' 
+  | 'familiar'
+  | 'therapeutic' 
+  | 'creative' 
+  | 'respectful' 
+  | 'protocol' 
+  | 'educational'; 

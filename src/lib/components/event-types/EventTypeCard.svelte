@@ -2,6 +2,8 @@
 <script lang="ts">
   import type { SocialEventType } from '$lib/types/event';
   import SaveButton from '$lib/components/SaveButton.svelte';
+  import Tooltip from '$lib/components/Tooltip.svelte'; // ADD THIS IMPORT
+  
   
   // Use $props() for Svelte 5
   const { event, showSaveButton = true } = $props<{
@@ -51,17 +53,34 @@
     </span>
   </div>
   
-  <!-- Metrics -->
+  <!-- Metrics Section - ADD TOOLTIPS HERE -->
   <div class="flex gap-2 mb-3">
-    <span class={getPressureClass(event.pressureProfile.level)}>
-      {event.pressureProfile.level} Pressure
-    </span>
-    <span class={getSoloClass(event.socialStructure.soloFriendliness)}>
-      {event.socialStructure.soloFriendliness} Solo
-    </span>
-    <span class={getTouchClass(event.touchProfile.level)}>
-      {event.touchProfile.level} Touch
-    </span>
+    <Tooltip 
+      text="Pressure: How much social effort is expected. Low = casual, High = more engagement needed."
+      position="top"
+    >
+      <span class={getPressureClass(event.pressureProfile.level)}>
+        {event.pressureProfile.level} Pressure
+      </span>
+    </Tooltip>
+    
+    <Tooltip 
+      text="Solo-Friendly: How welcoming this event is for people attending alone."
+      position="top"
+    >
+      <span class={getSoloClass(event.socialStructure.soloFriendliness)}>
+        {event.socialStructure.soloFriendliness} Solo
+      </span>
+    </Tooltip>
+    
+    <Tooltip 
+      text="Touch Level: Expected physical contact. None = no touch, High = frequent/close contact."
+      position="top"
+    >
+      <span class={getTouchClass(event.touchProfile.level)}>
+        {event.touchProfile.level} Touch
+      </span>
+    </Tooltip>
   </div>
   
   <!-- Description -->
@@ -94,6 +113,19 @@
     {#if showSaveButton}
       <!-- Simple SaveButton without custom event handler -->
       <SaveButton eventTypeId={event.id} size="sm" />
+    {/if}
+
+    <!-- Add to metrics section, after touch badge: -->
+    {#if event.logistics?.alcohol}
+      <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
+        {event.logistics.alcohol.likelihood === 'none' ? 'Sober' : 'Drinks'}
+      </span>
+    {/if}
+
+    {#if event.logistics?.parking?.type === 'free'}
+      <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
+        Free Parking
+      </span>
     {/if}
   </div>
 </div>

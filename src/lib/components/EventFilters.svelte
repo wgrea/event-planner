@@ -194,3 +194,29 @@
     Clear All Filters
   </button>
 </div>
+
+<!-- 
+
+Add to existing filters: 
+<div class="filter-group">
+  <h4 class="font-medium mb-2">Alcohol:</h4>
+  <label class="filter-option">
+    <input type="checkbox" bind:group={filters.alcoholLevels} value="none" />
+    <span>Sober-friendly</span>
+  </label>
+  <label class="filter-option">
+    <input type="checkbox" bind:group={filters.alcoholLevels} value="low" />
+    <span>Light drinking</span>
+  </label>
+  <!-- Add medium, high 
+</div>
+
+<div class="filter-group">
+  <h4 class="font-medium mb-2">Parking:</h4>
+  <label class="filter-option">
+    <input type="checkbox" bind:group={filters.parkingTypes} value="free" />
+    <span>Free parking</span>
+  </label>
+</div>
+ 
+-->
