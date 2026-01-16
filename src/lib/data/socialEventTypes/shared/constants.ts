@@ -1,4 +1,6 @@
 // src/lib/data/socialEventTypes/shared/constants.ts
+// show this before adding more data
+
 export const PRESSURE_LEVELS = ['low', 'medium', 'high'] as const;
 export const SOLO_FRIENDLINESS_LEVELS = ['high', 'moderate', 'low'] as const;
 export const TOUCH_LEVELS = ['none', 'low', 'moderate', 'high', 'varies'] as const; // Added 'varies'
@@ -23,7 +25,8 @@ export const CATEGORIES = [
   'technology',
   'wellness',
   'social',
-  'cultural', // NEW - add this
-  'nightlife',  // ADD THIS
-  'bar-events',  // ADD THIS
+  'cultural',
+  'nightlife',
+  'bar-events',
+  'conventions', // ADD THIS
 ] as const;

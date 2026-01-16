@@ -2,8 +2,8 @@
 
 // Import all categories
 import { hobbyEvents } from './categories/hobby';
-import { danceEvents } from './categories/dance';
-import { musicEvents } from './categories/music';
+import { danceEvents } from './categories/dance/index';
+import { musicEvents } from './categories/music/index';
 import { movementEvents } from './categories/movement';
 import { educationalEvents } from './categories/educational';
 import { specialInterestEvents } from './categories/special-interest';
@@ -14,15 +14,20 @@ import { gamingEvents } from './categories/gaming';
 import { sportsEvents } from './categories/sports';
 import { animalEvents } from './categories/animal'; // NEW
 import { creativeEvents } from './categories/creative'; // NEW
-import { datingEvents } from './categories/dating'; // NEW
+import { datingEvents } from './categories/dating/index'; // NEW
 import { foodDrinkEvents } from './categories/food-drink'; // NEW
 import { outdoorEvents } from './categories/outdoor'; // NEW
 import { technologyEvents } from './categories/technology'; // NEW
 import { wellnessEvents } from './categories/wellness'; // NEW
 import { socialEvents } from './categories/social'; // Already exists
 import { culturalEvents } from './categories/cultural'; // NEW
+// src/lib/data/socialEventTypes/index.ts
 
-// In the combined array, add culturalEvents:
+// Add these imports at the top with the others:
+import { nightlifeEvents } from './categories/nightlife/index';
+import { barEvents } from './categories/bar-events/index';
+
+// In the combined array, add them:
 export const socialEventTypes = [
   ...hobbyEvents,
   ...danceEvents,
@@ -43,10 +48,12 @@ export const socialEventTypes = [
   ...technologyEvents,
   ...wellnessEvents,
   ...socialEvents,
-  ...culturalEvents, // NEW - Add this line
+  ...culturalEvents,
+  ...nightlifeEvents, // ADD THIS LINE
+  ...barEvents,       // ADD THIS LINE
 ];
 
-// In the re-exports section, add culturalEvents:
+// In the re-exports section, add them:
 export {
   hobbyEvents,
   danceEvents,
@@ -67,7 +74,9 @@ export {
   technologyEvents,
   wellnessEvents,
   socialEvents,
-  culturalEvents, // NEW - Add this line
+  culturalEvents,
+  nightlifeEvents, // ADD THIS LINE
+  barEvents,       // ADD THIS LINE
 };
 
 // Re-export utility functions and constants

@@ -1,3 +1,4 @@
+// src/lib/data/socialEventTypes/categories/volunteer.ts
 import type { SocialEventType } from '$lib/types/event';
 
 export const volunteerEvents: SocialEventType[] = [

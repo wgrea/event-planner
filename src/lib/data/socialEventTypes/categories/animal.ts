@@ -1,3 +1,6 @@
+// src/lib/data/socialEventTypes/categories/animal.ts
+// show this as an example before adding more data
+
 import type { SocialEventType } from '$lib/types/event';
 
 export const animalEvents: SocialEventType[] = [

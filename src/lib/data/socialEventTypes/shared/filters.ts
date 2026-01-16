@@ -7,6 +7,10 @@ export interface FilterOptions {
   soloFriendliness?: SoloFriendliness[];
   touchLevels?: TouchLevel[];
   searchTerm?: string;
+  alcoholLevels?: ('none' | 'low' | 'medium' | 'high')[];
+  parkingTypes?: ('free' | 'paid' | 'mixed')[];
+  seasonal?: 'cheaper' | 'any';
+  proximityLevels?: (1 | 2 | 3 | 4)[];
 }
 
 export function filterEvents(options: FilterOptions): SocialEventType[] {
@@ -52,8 +56,43 @@ export function filterEvents(options: FilterOptions): SocialEventType[] {
     );
   }
 
+  // NEW: Alcohol filter
+  if (options.alcoholLevels && options.alcoholLevels.length > 0) {
+    filtered = filtered.filter(event => {
+      const alcoholLevel = event.logistics?.alcohol?.likelihood;
+      return alcoholLevel && options.alcoholLevels!.includes(alcoholLevel);
+    });
+  }
+  
+  // Better approach: Group 'difficult' with 'paid' for filtering
+  if (options.parkingTypes && options.parkingTypes.length > 0) {
+    filtered = filtered.filter(event => {
+      const parkingType = event.logistics?.parking?.type;
+      if (!parkingType) return false;
+      
+      // If user wants 'paid', include both 'paid' and 'difficult'
+      if (options.parkingTypes!.includes('paid') && parkingType === 'difficult') {
+        return true;
+      }
+      
+      return parkingType && (options.parkingTypes! as string[]).includes(parkingType);
+    });
+  }
+  
+  // NEW: Seasonal filter (check if current month is in cheaperMonths)
+  if (options.seasonal === 'cheaper') {
+    const currentMonth = new Date().toLocaleString('en-US', { month: 'short' });
+    filtered = filtered.filter(event => 
+      event.seasonalPricing?.cheaperMonths.includes(currentMonth)
+    );
+  }
+  
   return filtered;
 }
+
+// Add new filter value getters:
+export const allAlcoholLevels = ['none', 'low', 'medium', 'high'] as const;
+export const allParkingTypes = ['free', 'paid', 'mixed', 'difficult'] as const;
 
 // Get all unique values for filters
 export const allCategories = Array.from(
