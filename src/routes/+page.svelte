@@ -45,34 +45,5 @@ Analyze:
       </div>
     </div>
   </div>
-  
-  <!-- How it Works -->
-  <div class="bg-white py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">How It Works</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl">🎯</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">1. Set Your Comfort Level</h3>
-          <p class="text-gray-600">Filter by pressure, solo-friendliness, and touch comfort to match your preferences.</p>
-        </div>
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl">🔍</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">2. Discover Event Types</h3>
-          <p class="text-gray-600">Browse different social activities with transparent expectations and tips.</p>
-        </div>
-        <div class="text-center p-6">
-          <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl">💡</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">3. Get Practical Guidance</h3>
-          <p class="text-gray-600">Learn how to navigate each event type successfully with pro tips and red flags.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
 </div>
