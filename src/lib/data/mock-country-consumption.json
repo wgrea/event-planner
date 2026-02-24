@@ -1,0 +1,16 @@
+[
+  { "code": "CZE", "liters": 14.3 },
+  { "code": "AUT", "liters": 12.1 },
+  { "code": "FRA", "liters": 11.7 },
+  { "code": "DEU", "liters": 11.5 },
+  { "code": "GBR", "liters": 10.4 },
+  { "code": "USA", "liters": 9.2 },
+  { "code": "AUS", "liters": 8.7 },
+  { "code": "JPN", "liters": 7.1 },
+  { "code": "CHN", "liters": 5.5 },
+  { "code": "IND", "liters": 4.3 },
+  { "code": "BRA", "liters": 6.8 },
+  { "code": "MEX", "liters": 5.9 },
+  { "code": "ZAF", "liters": 7.3 },
+  { "code": "NGA", "liters": 3.8 }
+]

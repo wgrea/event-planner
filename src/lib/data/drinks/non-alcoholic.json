@@ -1,0 +1,34 @@
+[
+  {
+    "id": "kava",
+    "name": "Kava",
+    "category": "Non-Alcoholic Ritual",
+    "subcategory": "Ceremonial Drink",
+    "alcohol_percentage": 0,
+    "origin": "Pacific Islands (Fiji, Vanuatu, Tonga, Samoa, Hawaii)",
+    "flavor_profile": ["earthy", "peppery", "numbing", "muddy"],
+    "typical_setting": ["ceremony", "social-gathering", "relaxation", "traditional-meeting"],
+    "cultural_notes": "Traditional ceremonial drink made from kava root. Produces relaxation without intoxication. Central to Pacific Islander culture. The kava circle is a sacred social space.",
+    "global_availability": "regional",
+    "manufacturing_notes": "Root pounded and mixed with water",
+    "consumption_patterns": ["ritual", "social-bonding", "relaxation"],
+    "legal_notes": "Legal in most places, regulated in some",
+    "regional_identity": "Pacific Islander"
+  },
+  {
+    "id": "flavored-malt-beverages-gulf",
+    "name": "Flavored Malt Beverages (Gulf)",
+    "category": "Non-Alcoholic Ritual",
+    "subcategory": "Malt Drink",
+    "alcohol_percentage": 0,
+    "origin": "Saudi Arabia, UAE, Gulf States",
+    "flavor_profile": ["malty", "sweet", "fruity", "carbonated"],
+    "typical_setting": ["family-gathering", "ramadan", "grocery-store", "social-event"],
+    "cultural_notes": "Non-alcoholic malt beverages popular in Gulf countries as an alternative to beer. Brands like Barbican and Holsten. Widely available and socially accepted.",
+    "global_availability": "regional",
+    "manufacturing_notes": "Brewed like beer, then alcohol removed",
+    "consumption_patterns": ["social", "family-friendly", "ramadan"],
+    "legal_notes": "Completely legal in Gulf countries",
+    "regional_identity": "Gulf Arab"
+  }
+]

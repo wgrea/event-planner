@@ -1,0 +1,90 @@
+[
+  {
+    "id": "edm-club",
+    "name": "EDM Club",
+    "slug": "edm-club",
+    "pressure_level": "high",
+    "vibe": ["bass-heavy", "flashing-lights", "lasers", "crowded", "energetic"],
+    "music_identity": ["electronic", "house", "techno", "dubstep", "trance"],
+    "social_expectations": "Dancing over talking, crowd energy focused on DJ, phone cameras out for drops, hands in the air",
+    "typical_drinks": ["vodka", "energy-drink-mixes", "bottle-service"],
+    "cultural_notes": "The cathedral of electronic music. DJ as spiritual leader, crowd as congregation. Light shows and production value rival concerts."
+  },
+  {
+    "id": "latin-club",
+    "name": "Latin Club",
+    "slug": "latin-club",
+    "pressure_level": "moderate-high",
+    "vibe": ["passionate", "colorful", "rhythmic", "sexy", "energetic"],
+    "music_identity": ["salsa", "bachata", "reggaeton", "cumbia", "merengue"],
+    "social_expectations": "Couples dancing, asking strangers to dance is normal, actual dance skills matter, fluid movement",
+    "typical_drinks": ["rum", "tequila", "margarita", "mojito"],
+    "cultural_notes": "Where Latin rhythms take over. Dancing is the point - if you don't dance, you stand out. Often includes dance lessons earlier in evening."
+  },
+  {
+    "id": "hip-hop-club",
+    "name": "Hip-Hop Club",
+    "slug": "hip-hop-club",
+    "pressure_level": "high",
+    "vibe": ["urban", "street-style", "dress-to-impress", "bass-heavy", "confident"],
+    "music_identity": ["hip-hop", "rap", "rnb", "trap", "old-school"],
+    "social_expectations": "Groups of friends, bottle service culture, knowing the lyrics, more segregated by artist preference",
+    "typical_drinks": ["hennessy", "cognac", "moet", "patron"],
+    "cultural_notes": "Center of hip-hop culture in nightlife. Music spans golden era to current hits. Fashion is part of the experience."
+  },
+  {
+    "id": "lgbtq-club",
+    "name": "LGBTQ+ Club",
+    "slug": "lgbtq-club",
+    "pressure_level": "varies",
+    "vibe": ["inclusive", "colorful", "celebratory", "drag-performances", "safe-space"],
+    "music_identity": ["pop", "dance", "diva-hits", "varied"],
+    "social_expectations": "Radical acceptance, self-expression encouraged, drag shows as entertainment, anyone can dance with anyone",
+    "typical_drinks": ["colorful-cocktails", "vodka", "gin"],
+    "cultural_notes": "Historically crucial safe spaces for LGBTQ+ community. Often includes drag performances, theme nights. Energy of chosen family."
+  },
+  {
+    "id": "top-40-club",
+    "name": "Top-40 Club",
+    "slug": "top-40-club",
+    "pressure_level": "moderate-high",
+    "vibe": ["mainstream", "commercial", "college-crowd", "predictable", "crowded"],
+    "music_identity": ["current-hits", "pop", "requests", "crowd-pleasers"],
+    "social_expectations": "Large groups, birthday celebrations, people-watching, generic fun atmosphere",
+    "typical_drinks": ["well-drinks", "vodka-cranberries", "beer"],
+    "cultural_notes": "The default club experience. Plays what's on the radio. Attracts bachelor/bachelorette parties. Predictable but reliable."
+  },
+  {
+    "id": "after-hours-club",
+    "name": "After-Hours Club",
+    "slug": "after-hours-club",
+    "pressure_level": "high",
+    "vibe": ["dark", "intense", "dedicated-crowd", "time-warp", "underground"],
+    "music_identity": ["techno", "house", "underground", "long-sets"],
+    "social_expectations": "Serious dancers, no phones on dance floor, the music is the point, people there for the art",
+    "typical_drinks": ["water-mostly", "basic-drinks"],
+    "cultural_notes": "Operates late (often 2am until morning). Attracts nightlife die-hards. Often in warehouses or hidden locations. Music takes priority over everything."
+  },
+  {
+    "id": "student-club",
+    "name": "Student Club",
+    "slug": "student-club",
+    "pressure_level": "moderate-high",
+    "vibe": ["cheap-drinks", "young-crowd", "energetic", "sloppy", "theme-nights"],
+    "music_identity": ["current-hits", "throwbacks", "crowd-favorites"],
+    "social_expectations": "Pre-gaming culture, meeting new people, low inhibitions, dancing in packs",
+    "typical_drinks": ["cheap-beer", "well-drinks", "shots", "jagerbombs"],
+    "cultural_notes": "College/university area staple. Student IDs for discounts. Theme nights (80s, 90s) popular. Where many have their first club experiences."
+  },
+  {
+    "id": "high-end-bottle-service-club",
+    "name": "High-End Bottle-Service Club",
+    "slug": "high-end-bottle-service-club",
+    "pressure_level": "high",
+    "vibe": ["luxurious", "exclusive", "see-and-be-seen", "velvet-ropes", "champagne"],
+    "music_identity": ["top-40", "house", "commercial-edm"],
+    "social_expectations": "VIP areas, bottle service as status, dress code enforced, networking, performers in cages",
+    "typical_drinks": ["champagne", "premium-spirits", "bottle-service"],
+    "cultural_notes": "Status-driven nightlife. Tables are territory. Often attached to high-end restaurants or hotels. Promoters and guest lists control access."
+  }
+]

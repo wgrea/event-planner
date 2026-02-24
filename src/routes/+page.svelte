@@ -1,49 +1,57 @@
 <!-- src/routes/+page.svelte -->
-
-<!--
-Analyze:
-- Meetup
-- Eventbrite's discovery side
-- Atlas Obscura
-- Pinterest
--->
-
 <script lang="ts">
-  import EventTypeSelector from '$lib/components/EventTypeSelector.svelte';
-  import EventTypeCard from '$lib/components/event-types/EventTypeCard.svelte';
-  import { socialEventTypes } from '$lib/data/socialEventTypes';
-  
-  // Get a mix of event types for the showcase
-  const showcaseEvents = [
-    socialEventTypes.find(e => e.id === 'hobby-knitting-circle'),
-    socialEventTypes.find(e => e.id === 'dance-salsa-social'),
-    socialEventTypes.find(e => e.id === 'music-rave')
-  ].filter(Boolean);
+import type { BarType, EventType, ClubType } from '$lib/types';
+
+import barTypesJson from '$lib/data/bar-types.json';
+import eventTypesJson from '$lib/data/event-types.json';
+import clubTypesJson from '$lib/data/club-types.json';
+import mockConsumption from '$lib/data/mock-country-consumption.json';
+
+import Header from '$lib/components/home/Header.svelte';
+  import CategoryGrid from '$lib/components/home/CategoryGrid.svelte';
+  import ExtraButtons from '$lib/components/home/ExtraButtons.svelte';
+  import DrankEverywhere from '$lib/components/home/DrankEverywhere.svelte';
+  import Dashboard from '$lib/components/home/Dashboard.svelte';
+  import SafetyButton from '$lib/components/home/SafetyButton.svelte';
+  import AboutSection from '$lib/components/home/AboutSection.svelte';
+
+const barTypes = barTypesJson as BarType[];
+const eventTypes = eventTypesJson as EventType[];
+const clubTypes = clubTypesJson as ClubType[];
+
+type CountryConsumption = {
+  code: string;
+  liters: number;
+};
+const consumption = mockConsumption as CountryConsumption[];
+
+  // Drank Everywhere subset (hardcoded or filtered)
+  const drankEverywhere = [
+    { name: 'Heineken', country: 'Netherlands', category: 'Beer' },
+    { name: 'Budweiser', country: 'USA', category: 'Beer' },
+    { name: 'Bud Light', country: 'USA', category: 'Beer' },
+    { name: 'Corona Extra', country: 'Mexico', category: 'Beer' },
+    { name: 'Miller Lite', country: 'USA', category: 'Beer' },
+    { name: 'Stella Artois', country: 'Belgium', category: 'Beer' }
+  ];
 </script>
 
-<svelte:head>
-  <title>Social Event Explorer - Find Your Perfect Social Activity</title>
-</svelte:head>
-
-<div class="min-h-screen bg-linear-to-br from-gray-50 to-white">
-  <!-- Hero Section -->
-  <div class="container mx-auto px-4 py-12 md:py-20">
-    <div class="text-center max-w-3xl mx-auto">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-        Find Social Events That <span class="text-blue-600">Actually Feel Good</span>
-      </h1>
-      <p class="text-xl text-gray-600 mb-8">
-        Discover low-pressure activities based on your comfort with touch, social pressure, and solo attendance.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          href="/event-types" 
-          class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold text-lg transition-colors"
-        >
-          Explore Event Types
-        </a>
-      </div>
-    </div>
+<div class="min-h-screen bg-[#CDE7F6]/30 p-6">
+  <div class="max-w-xl mx-auto bg-white rounded-xl shadow-md p-6">
+    <Header />
+    <Dashboard {consumption} />
+    {#each consumption as row}
+      <a
+        href={`/safety/inspect?code=${row.code}`}
+        class="text-blue-600 underline"
+      >
+        {row.code}
+      </a>
+    {/each}
+    <CategoryGrid {barTypes} {eventTypes} {clubTypes} />
+    <ExtraButtons />
+    <DrankEverywhere {drankEverywhere} />
+    <AboutSection />
   </div>
-
 </div>
+

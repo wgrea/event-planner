@@ -1,0 +1,17 @@
+[
+  {
+    "id": "saudi-arabia",
+    "name": "Saudi Arabia",
+    "alcohol_restriction_level": "prohibited",
+    "cities": ["riyadh", "jeddah", "dammam"],
+    "cultural_notes": "Strict Islamic laws prohibit alcohol",
+    "legal_notes": "Alcohol possession can lead to severe penalties"
+  },
+  {
+    "id": "usa",
+    "name": "United States",
+    "alcohol_restriction_level": "moderate",
+    "cities": ["nyc", "chicago", "la", "miami", "austin"],
+    "cultural_notes": "Varies by state, minimum drinking age 21"
+  }
+]

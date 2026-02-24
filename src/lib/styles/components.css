@@ -1,0 +1,97 @@
+/* src/lib/styles/components.css */
+
+/* Layout */
+.page {
+  @apply max-w-xl mx-auto p-6;
+}
+
+.section {
+  @apply mb-8;
+}
+
+/* Typography */
+.section-title {
+  @apply text-xl font-semibold mb-4;
+}
+
+.subtle-text {
+  @apply text-gray-600;
+}
+
+/* Cards */
+.card {
+  @apply p-4 rounded-xl bg-gray-100 shadow-sm border border-gray-200;
+}
+
+.drink-card {
+  @apply p-4 rounded-lg bg-gray-50 border border-gray-200;
+}
+
+.stat-card {
+  @apply p-4 rounded-lg bg-gray-100 text-center;
+}
+
+/* Buttons */
+.big-button {
+  @apply block p-4 rounded-lg bg-blue-100 text-center font-semibold;
+}
+
+.view-all {
+  @apply block mt-4 text-center p-3 rounded-lg bg-gray-200 font-semibold;
+}
+
+.safety-button {
+  @apply block mt-4 text-center p-3 rounded-lg bg-red-100 font-semibold;
+}
+
+/* Grids */
+.category-grid {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.button-grid {
+  @apply grid gap-4;
+}
+
+.drank-list {
+  @apply grid gap-4;
+}
+
+.stats-grid {
+  @apply grid grid-cols-2 gap-4 my-4;
+}
+
+.country-grid {
+  @apply grid grid-cols-7 gap-2 text-center font-semibold mb-4;
+}
+
+/* Inputs */
+.search-input {
+  @apply w-full p-3 rounded-lg border border-gray-300 my-4;
+}
+
+/* Tabs */
+.tab-row {
+  @apply flex gap-2 mb-4;
+}
+
+.tab {
+  @apply flex-1 p-2 rounded-lg bg-gray-200 font-semibold text-center;
+}
+
+.tab-active {
+  @apply bg-blue-200;
+}
+
+/* Table */
+.consumption-table {
+  @apply w-full border-collapse my-4 text-sm;
+}
+
+.consumption-table th {
+  @apply text-left font-semibold text-gray-700 border-b border-gray-300 p-2;
+}
+
+.consumption-table td {
+  @apply border-b border-gray-200 p-2;
+}

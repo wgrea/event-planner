@@ -1,0 +1,92 @@
+[
+  {
+    "id": "bar-crawls-pub-crawls",
+    "name": "Bar Crawls / Pub Crawls",
+    "slug": "bar-crawls-pub-crawls",
+    "touch_level": "medium",
+    "social_dynamics": "Moving group energy, strangers becoming friends, shared mission to visit multiple venues, collective decision-making",
+    "plan_night_around": true,
+    "typical_drinks": ["beer", "shots", "varied"],
+    "cultural_notes": "Organized or spontaneous. Popular for birthdays, bachelor/bachelorette parties, and tourists exploring nightlife districts. Often includes drink specials at each stop."
+  },
+  {
+    "id": "expat-digital-nomad-meetups",
+    "name": "Expat & Digital Nomad Meetups",
+    "slug": "expat-digital-nomad-meetups",
+    "touch_level": "medium-high",
+    "social_dynamics": "Networking, friendship-seeking, sharing tips about the city, building community away from home",
+    "plan_night_around": false,
+    "typical_drinks": ["beer", "wine", "cocktails"],
+    "cultural_notes": "Lifeline for foreigners in a new city. Often organized through Facebook or Meetup.com. Mix of social and practical - people share advice and make friends."
+  },
+  {
+    "id": "cultural-events-festivals",
+    "name": "Cultural Events & Festivals",
+    "slug": "cultural-events-festivals",
+    "touch_level": "variable",
+    "social_dynamics": "Celebratory, educational, community pride, intergenerational",
+    "plan_night_around": true,
+    "typical_drinks": ["traditional-drinks", "local-specials", "beer"],
+    "cultural_notes": "From Oktoberfest to Day of the Dead to Carnival. These are the heartbeat of local culture. Often annual, deeply traditional, and transformative experiences."
+  },
+  {
+    "id": "pub-trivia",
+    "name": "Pub Trivia",
+    "slug": "pub-trivia",
+    "touch_level": "low",
+    "social_dynamics": "Teams competing, mix of focus and socializing, collective brainpower, friendly rivalry",
+    "plan_night_around": true,
+    "typical_drinks": ["beer", "pub-food", "wings"],
+    "cultural_notes": "Weekly tradition in many pubs. Teams have regular names, hosts develop personalities, prizes (often bar tabs) add stakes. Great for regular groups."
+  },
+  {
+    "id": "structured-dance-lessons",
+    "name": "Structured Dance Lessons",
+    "slug": "structured-dance-lessons",
+    "touch_level": "high",
+    "social_dynamics": "Learning together, rotating partners, overcoming awkwardness, shared progress",
+    "plan_night_around": true,
+    "typical_drinks": ["water", "beer-after", "wine"],
+    "cultural_notes": "Salsa, swing, tango, or line dancing. Often includes social dancing after lesson. Great for singles and couples. Builds community over time."
+  },
+  {
+    "id": "karaoke-night",
+    "name": "Karaoke Night",
+    "slug": "karaoke-night",
+    "touch_level": "low",
+    "social_dynamics": "Supportive cheering, taking turns, inside jokes forming, liquid courage in effect",
+    "plan_night_around": true,
+    "typical_drinks": ["beer", "shots", "cocktails"],
+    "cultural_notes": "Everyone's a star for 3-5 minutes. Ranges from private rooms (Japan/Korea style) to public stages. Group participation is key - the more people sing, the better."
+  },
+  {
+    "id": "sports-viewing-party",
+    "name": "Sports Viewing Party",
+    "slug": "sports-viewing-party",
+    "touch_level": "medium",
+    "social_dynamics": "Collective emotional journey, strangers high-fiving, group groans at losses, euphoria at wins",
+    "plan_night_around": true,
+    "typical_drinks": ["beer", "wings-and-beer", "pitchers"],
+    "cultural_notes": "Championship games, local team rivalries, international tournaments (World Cup). Turns a bar into a temporary community of believers. The shared stakes create bonding."
+  },
+  {
+    "id": "bar-game-tournament",
+    "name": "Bar Game Tournament",
+    "slug": "bar-game-tournament",
+    "touch_level": "medium",
+    "social_dynamics": "Friendly competition, brackets, trash talk, regulars competing, new challengers welcome",
+    "plan_night_around": true,
+    "typical_drinks": ["beer", "shots-for-winners"],
+    "cultural_notes": "Pool, darts, shuffleboard, cornhole, or even Mario Kart. Builds regular community. Winners get bar tab or trophy. Can get surprisingly competitive."
+  },
+  {
+    "id": "open-mic-night",
+    "name": "Open Mic Night",
+    "slug": "open-mic-night",
+    "touch_level": "low",
+    "social_dynamics": "Supportive audience, nervous performers, discovery of local talent, intimate vibe",
+    "plan_night_around": false,
+    "typical_drinks": ["beer", "wine", "coffee"],
+    "cultural_notes": "Where local artists test material. Comedy, music, poetry. You never know if you'll see future stars or glorious failures. Regulars develop over time."
+  }
+]

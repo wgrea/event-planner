@@ -1,0 +1,13 @@
+{
+  "GBR": {
+    "country": "United Kingdom",
+    "region": "Europe",
+    "annual": 9.7,
+    "change": 2.3,
+    "peakHour": "8pm (weekends)",
+    "regionalAverage": 9.2,
+    "globalRank": 5,
+    "updated": "February 2026",
+    "source": "WHO Global Health Observatory"
+  }
+}

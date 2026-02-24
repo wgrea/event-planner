@@ -1,8 +1,12 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {},
-  },
-  plugins: [],
+    extend: {
+      colors: {
+        softOrange: '#F9D9A7',
+        softBlue: '#CDE7F6',
+        softWhite: '#FFFFFF'
+      }
+    }
+  }
 }
