@@ -8,27 +8,29 @@
 </script>
 
 <section class="section">
-  <h2 class="section-title">Explore By Category</h2>
+  <h2 class="section-title">Where Drinks Are Found</h2>
+  <p class="subtle-text mb-4">
+    Drinks are experienced in social settings like bars, events, and clubs.
+  </p>
+
+  <a href="/drinks" class="view-all mb-4 block">
+    Explore the Full Global Drinks Database
+  </a>
 
   <div class="category-grid">
     <a href="/bars" class="card">
       <h3>Bar Types</h3>
-      <p>{barTypes.length} curated atmospheres</p>
+      <p>{barTypes.length} types</p>
     </a>
 
     <a href="/events" class="card">
       <h3>Event Types</h3>
-      <p>{eventTypes.length} social experiences</p>
+      <p>{eventTypes.length} types</p>
     </a>
 
     <a href="/clubs" class="card">
       <h3>Club Types</h3>
-      <p>{clubTypes.length} nightlife scenes</p>
-    </a>
-
-    <a href="/drinks" class="card">
-      <h3>Global Drinks Database</h3>
-      <p>Worldwide & regional</p>
+      <p>{clubTypes.length} types</p>
     </a>
   </div>
 </section>

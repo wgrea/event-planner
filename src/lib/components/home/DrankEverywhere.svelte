@@ -7,19 +7,27 @@
   }[];
 </script>
 
-<section class="mb-8">
+<section class="mb-8 p-4 rounded-xl bg-gray-50 border border-gray-200">
+
   <h2 class="text-xl font-semibold">Drank Everywhere</h2>
-  <p class="text-gray-600 mb-4">Globally recognized brands found in most countries</p>
+  <p class="text-gray-600 mb-2">
+    Globally recognized brands found in most countries
+  </p>
 
-  <div class="grid gap-4">
-    {#each drankEverywhere as item}
-      <div class="drink-card">
-        <h3>{item.name}</h3>
-        <p>{item.country}</p>
-        <p class="text-gray-500 text-sm">{item.category}</p>
-      </div>
-    {/each}
-  </div>
+  <!-- Future Will Note:
+       Users may be more interested in what is NOT consumed everywhere.
+       Consider adding a "Unique to Region" or "Local Specialties" section later.
+  -->
+  <p class="text-gray-500 text-sm mb-4 italic">
+    (A quick look at what’s familiar worldwide)
+  </p>
 
-  <a href="/drinks" class="view-all">View All Global Drinks</a>
+<div class="grid gap-2 max-h-64 overflow-y-auto pr-2">
+  {#each drankEverywhere as item}
+    <div class="drink-card p-2 text-sm">
+      {item.name} — {item.country} — {item.category}
+    </div>
+  {/each}
+</div>
+
 </section>

@@ -3,6 +3,10 @@
   import { page } from '$app/stores';
   export let href;
 
+  // Future Will Note:
+  // This button is ONLY for the Safety flow (Inspect → Analyze → Assess).
+  // Do NOT render on the Home page.
+  // It auto-appends ?code=XYZ when present.
   $: code = $page.url.searchParams.get('code');
   $: finalHref = code ? `${href}?code=${code}` : href;
 </script>

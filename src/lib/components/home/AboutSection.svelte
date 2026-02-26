@@ -1,4 +1,4 @@
-  <!-- About -->
+  <!-- src/lib/components/home/AboutSection.svelte -->
   <section class="section about">
     <h2>About This Database</h2>
     <p>
