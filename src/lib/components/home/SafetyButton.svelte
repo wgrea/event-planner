@@ -3,14 +3,22 @@
   import { page } from '$app/stores';
   export let href;
 
-  // Future Will Note:
-  // This button is ONLY for the Safety flow (Inspect → Analyze → Assess).
-  // Do NOT render on the Home page.
-  // It auto-appends ?code=XYZ when present.
   $: code = $page.url.searchParams.get('code');
   $: finalHref = code ? `${href}?code=${code}` : href;
 </script>
 
-<a href={finalHref} class="fixed bottom-6 right-6 ...">
-  View Safety Assessment
+<a
+  href={finalHref}
+  class="
+    fixed bottom-6 right-6
+    w-20 h-20
+    rounded-full
+    flex items-center justify-center
+    bg-[#FFF7ED]
+    text-black
+    shadow-lg shadow-light-orange-300/40
+    text-[10px] leading-tight font-semibold text-center px-2
+  "
+>
+  View Safety<br/>Assessment
 </a>

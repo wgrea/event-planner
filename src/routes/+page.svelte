@@ -31,7 +31,7 @@
   ];
 </script>
 
-<div class="min-h-screen bg-[#CDE7F6]/30 p-6">
+<div class="p-6">
   <div class="max-w-xl mx-auto bg-white rounded-xl shadow-md p-6 space-y-10">
 
     <Header />

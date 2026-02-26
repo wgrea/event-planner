@@ -4,7 +4,46 @@
 export type AlcoholRestrictionLevel = 'none' | 'moderate' | 'high' | 'prohibited';
 export type PressureLevel = 'low' | 'low-moderate' | 'moderate' | 'moderate-high' | 'high';
 
-// Add these to your existing types file
+// Add these to your existing types.ts file
+
+export type StrengthLevel = {
+  label: string;
+  range: [number, number];
+};
+
+export type FilterState = {
+  searchQuery: string;
+  selectedCategory: string | null;
+  selectedRegion: string | null;
+  selectedStrength: string | null;
+};
+
+// Add these constants (they could also go in a separate constants file)
+export const CATEGORIES = [
+  'Beer',
+  'Wine',
+  'Spirits',
+  'Cocktails',
+  'Fermented Traditional',
+  'Non-Alcoholic Ritual'
+] as const;
+
+export const REGIONS = [
+  'Africa',
+  'Asia',
+  'Europe',
+  'North America',
+  'South America',
+  'Oceania',
+  'Middle East'
+] as const;
+
+export const STRENGTH_LEVELS = [
+  { label: 'Non-Alcoholic', range: [0, 0] },
+  { label: 'Low', range: [1, 10] },           // Changed from "Low (1–10%)"
+  { label: 'Medium', range: [11, 25] },        // Changed from "Medium (11–25%)"
+  { label: 'High', range: [26, 100] }          // Changed from "High (26%+)"
+] as const;
 
 export interface BarType {
   id: string;

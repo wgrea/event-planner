@@ -1,65 +1,111 @@
 /* src/lib/styles/components.css */
+/* ===========================
+   Global Background
+   =========================== */
 
-/* Layout */
+body {
+  @apply bg-[#FFF7ED]; /* soft orange */
+}
+
+/* ===========================
+   Layout
+   =========================== */
+
 .page {
-  @apply max-w-xl mx-auto p-6;
+  @apply max-w-xl mx-auto p-6 md:max-w-2xl;
 }
 
 .section {
-  @apply mb-8;
+  @apply mb-10;
 }
 
-/* Typography */
+/* ===========================
+   Typography
+   =========================== */
+
 .section-title {
-  @apply text-xl font-semibold mb-4;
+  @apply text-2xl font-semibold text-[#0F172A] mb-4;
 }
 
 .subtle-text {
   @apply text-gray-600;
 }
 
-/* Cards — unified design system */
-.card,
-.drink-card,
-.stat-card {
+/* ===========================
+   Cards
+   =========================== */
+
+.card {
   @apply p-4 rounded-xl shadow-sm border border-gray-200 bg-white;
 }
 
-/* Optional: category-specific accents */
-.card h3 {
-  @apply font-semibold text-gray-800;
-}
-
-.drink-card h3 {
-  @apply font-semibold text-gray-800;
+.drink-card {
+  @apply p-4 rounded-xl shadow-sm border border-gray-200 bg-white;
 }
 
 .stat-card {
-  @apply text-center bg-blue-50 border-blue-100;
+  @apply p-4 rounded-xl shadow-sm border border-blue-200 bg-blue-100 text-center;
 }
 
-/* Buttons */
-.big-button,
-.view-all,
-.safety-button {
-  @apply block p-4 rounded-xl text-center font-semibold shadow-sm border border-gray-200 bg-white;
+/* Category-specific tints */
+.bar-tint {
+  @apply bg-green-50 border-green-100;
 }
 
+.club-tint {
+  @apply bg-purple-50 border-purple-100;
+}
+
+.event-tint {
+  @apply bg-yellow-50 border-yellow-100;
+}
+
+.drink-tint {
+  @apply bg-yellow-50 border-yellow-100;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+
+.button-primary {
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+         bg-[#FFF7ED] text-black border border-[#FFF7ED];
+}
+
+.button-secondary {
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+         bg-blue-50 text-blue-800 border border-blue-200;
+}
+
+.button-tertiary {
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+         bg-gray-50 text-gray-700 border border-gray-200;
+}
+
+/* Legacy mappings */
 .big-button {
-  @apply bg-blue-50 border-blue-100 text-blue-700;
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+         bg-blue-50 text-blue-800 border border-blue-200;
 }
 
 .view-all {
-  @apply bg-gray-50 text-gray-700;
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+         bg-gray-50 text-gray-700 border border-gray-200;
 }
 
+/* Floating Safety Button */
 .safety-button {
-  @apply bg-red-50 border-red-100 text-red-700;
+  @apply fixed bottom-6 right-6 w-16 h-16 rounded-full flex items-center justify-center
+         bg-[#F59E0B] text-white shadow-lg shadow-orange-300/40 border border-orange-500;
 }
 
-/* Grids */
+/* ===========================
+   Grids
+   =========================== */
+
 .category-grid {
-  @apply grid grid-cols-3 gap-4;
+  @apply grid grid-cols-3 gap-4 md:grid-cols-4;
 }
 
 .button-grid {
@@ -67,7 +113,7 @@
 }
 
 .drank-list {
-  @apply grid gap-4;
+  @apply grid gap-3;
 }
 
 .stats-grid {
@@ -78,12 +124,18 @@
   @apply grid grid-cols-7 gap-2 text-center font-semibold mb-4;
 }
 
-/* Inputs */
+/* ===========================
+   Inputs
+   =========================== */
+
 .search-input {
   @apply w-full p-3 rounded-lg border border-gray-300 my-4;
 }
 
-/* Tabs */
+/* ===========================
+   Tabs
+   =========================== */
+
 .tab-row {
   @apply flex gap-2 mb-4;
 }
@@ -93,10 +145,13 @@
 }
 
 .tab-active {
-  @apply bg-blue-200;
+  @apply bg-blue-300 text-blue-900;
 }
 
-/* Table */
+/* ===========================
+   Tables
+   =========================== */
+
 .consumption-table {
   @apply w-full border-collapse my-4 text-sm;
 }
