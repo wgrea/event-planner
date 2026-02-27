@@ -24,7 +24,9 @@ body {
    =========================== */
 
 .section-title {
-  @apply text-2xl font-semibold text-[#0F172A] mb-4;
+  @apply text-2xl font-semibold text-[#7A4A00]
+         drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)]
+         mb-4;
 }
 
 .subtle-text {
@@ -39,8 +41,12 @@ body {
   @apply p-4 rounded-xl shadow-sm border border-gray-200 bg-white;
 }
 
-.drink-card {
-  @apply p-4 rounded-xl shadow-sm border border-gray-200 bg-white;
+.drank-everywhere-card {
+  @apply p-2 rounded-lg bg-white border border-gray-200 shadow-sm;
+}
+
+.drink-grid-card {
+  @apply p-4 rounded-xl bg-white border border-gray-200 shadow-sm;
 }
 
 .stat-card {
@@ -68,9 +74,15 @@ body {
    Buttons
    =========================== */
 
+.back-button {
+  @apply inline-block mb-4 text-blue-700 font-semibold 
+         drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)];
+}
+
 .button-primary {
-  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
-         bg-[#FFF7ED] text-black border border-[#FFF7ED];
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm
+         bg-[#FFF7ED] text-blue-700 border border-[#FFF7ED]
+         drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)];
 }
 
 .button-secondary {
@@ -90,7 +102,7 @@ body {
 }
 
 .view-all {
-  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm
          bg-gray-50 text-gray-700 border border-gray-200;
 }
 

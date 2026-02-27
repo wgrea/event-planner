@@ -21,6 +21,7 @@
   const consumption = mockConsumption as CountryConsumption[];
 
   // Makes sense to have data here since it's more global. 
+  // Maybe I should add this to the drinks database and not have this separate since I think users may expect what is drank everywhere to be in the database page
   const drankEverywhere = [
     { name: 'Heineken', country: 'Netherlands', category: 'Beer' },
     { name: 'Budweiser', country: 'USA', category: 'Beer' },

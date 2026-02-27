@@ -17,3 +17,4 @@
     No drinks found.
   </div>
 {/if}
+

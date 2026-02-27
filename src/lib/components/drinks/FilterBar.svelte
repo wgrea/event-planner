@@ -11,12 +11,10 @@
   export let onClearFilters: () => void;
 </script>
 
-<div class="bg-orange-50 border-b border-orange-100 py-8 px-6 mb-8">
+<div class="space-y-3">
   <div class="max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold mb-2">Global Drinks Database</h1>
-
     <!-- CATEGORY FILTERS -->
-    <div class="flex flex-wrap gap-2 mb-6">
+    <div class="flex flex-wrap gap-2 mb-3">
       {#each CATEGORIES as cat}
         <button
           class={`px-4 py-2 rounded-full border transition
@@ -37,7 +35,7 @@
     </div>
 
     <!-- REGION + STRENGTH FILTERS -->
-    <div class="flex flex-col md:flex-row gap-4 mb-6">
+    <div class="flex flex-col md:flex-row gap-2 mb-3">
       <select
         class="px-4 py-2 border rounded-lg bg-white"
         bind:value={selectedRegion}
@@ -53,7 +51,7 @@
       </select>
 
       <select
-        class="px-4 py-2 border rounded-lg bg-white"
+        class="px-3 py-2 border rounded-lg bg-white"
         bind:value={selectedStrength}
         on:change={() => {
           console.log('Strength changed to:', selectedStrength);
@@ -71,7 +69,7 @@
     <input
       type="text"
       placeholder="Search by name, category, or origin..."
-      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400"
+      class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400"
       bind:value={searchQuery}
       on:input={() => {
         console.log('Search query:', searchQuery);
@@ -82,7 +80,7 @@
     <!-- CLEAR FILTERS -->
     {#if selectedCategory || selectedRegion || selectedStrength || searchQuery}
       <button
-        class="mt-4 text-sm text-orange-700 hover:text-orange-900 underline"
+        class="mt-2 text-sm text-orange-700 hover:text-orange-900 underline"
         on:click={() => {
           console.log('Clear filters clicked');
           onClearFilters();

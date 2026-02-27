@@ -10,6 +10,7 @@
   console.log('Data received:', data);
   console.log('Number of drinks:', data.drinks?.length);
   
+  let filtersOpen = false;
   let allDrinks: Drink[] = data.drinks || [];
   let filteredDrinks: Drink[] = allDrinks;
 
@@ -66,17 +67,41 @@
   }
 </script>
 
-<!-- Remove the comments and use proper bind: syntax -->
-<FilterBar
-  bind:selectedCategory
-  bind:selectedRegion
-  bind:selectedStrength
-  bind:searchQuery
-  onFilterChange={applyFilters}
-  onClearFilters={clearFilters}
-/>
+<!-- Sticky header -->
+<div class="sticky top-0 z-30 bg-[#FFF7ED] px-4 pt-3 pb-2 shadow-md space-y-2">
 
-<!-- RESULTS COUNT -->
+  <!-- Back + Title -->
+  <a href="/" class="text-blue-700 font-semibold">← Back to Home</a>
+
+  <h1 class="text-xl font-semibold text-blue-700">
+    Global Drinks Database
+  </h1>
+
+  <!-- Toggle -->
+  <button
+    class="px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-sm font-medium shadow-sm"
+    on:click={() => filtersOpen = !filtersOpen}
+  >
+    {filtersOpen ? 'Close Filters ▲' : 'Open Filters ▼'}
+  </button>
+
+  <!-- Filter panel (NOW inside sticky container) -->
+  {#if filtersOpen}
+    <div class="pt-2 space-y-3">
+      <FilterBar
+        bind:selectedCategory
+        bind:selectedRegion
+        bind:selectedStrength
+        bind:searchQuery
+        onFilterChange={applyFilters}
+        onClearFilters={clearFilters}
+      />
+    </div>
+  {/if}
+
+</div>
+
+<!-- Results count -->
 <div class="max-w-4xl mx-auto px-6 mb-4 text-gray-600 text-sm">
   Showing {filteredDrinks.length} of {allDrinks.length} drinks
 </div>

@@ -26,7 +26,7 @@
 
   <div class="grid gap-2 max-h-64 overflow-y-auto pr-2">
     {#each drankEverywhere as item}
-      <div class="drink-card p-2 text-sm">
+      <div class="drank-everywhere-card p-2 text-sm">
         {item.name} — {item.country} — {item.category}
       </div>
     {/each}
