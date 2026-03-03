@@ -1,6 +1,7 @@
 // src/lib/utils/drink-filters.ts
-import type { Drink, FilterState } from '$lib/types';
+import type { Drink, FilterState, BarType, ClubType, EventType } from '$lib/types';
 
+// Rest of your file remains exactly the same
 export function getCategoryColor(category: string): string {
   const colors: Record<string, string> = {
     'Beer': 'bg-yellow-100 text-yellow-800',
@@ -16,6 +17,26 @@ export function getCategoryColor(category: string): string {
 // Normalize origin → region
 export function normalizeOriginToRegion(origin?: string): string {
   const originLower = origin?.toLowerCase() ?? '';
+
+    // Caribbean
+  if (
+    originLower.includes('caribbean') ||
+    originLower.includes('cuba') ||
+    originLower.includes('jamaica') ||
+    originLower.includes('puerto rico') ||
+    originLower.includes('dominican')
+  ) {
+    return 'Caribbean';
+  }
+
+  // Central Asia
+  if (
+    originLower.includes('mongolia') ||
+    originLower.includes('tibet') ||
+    originLower.includes('nepal')
+  ) {
+    return 'Central Asia';
+  }
 
   // Europe
   if (
@@ -151,6 +172,26 @@ export function getABV(drink: Drink): number {
   return drink.alcohol_percentage ?? 0;
 }
 
+// Enhanced ABV helper with more granular categories
+export function getABVCategory(abv: number): string {
+  if (abv <= 0.5) return 'Non-Alcoholic';
+  if (abv <= 5) return 'Low (Session)';
+  if (abv <= 10) return 'Moderate';
+  if (abv <= 20) return 'Strong';
+  if (abv <= 30) return 'Very Strong';
+  return 'High Proof';
+}
+
+// Get all unique categories with counts
+export function getCategoryCounts(drinks: Drink[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  drinks.forEach(drink => {
+    const category = drink.category;
+    counts.set(category, (counts.get(category) || 0) + 1);
+  });
+  return counts;
+}
+
 export function matchesStrength(drink: Drink, strengthFilter: string | null): boolean {
   if (!strengthFilter) return true;
 
@@ -168,6 +209,16 @@ export function matchesStrength(drink: Drink, strengthFilter: string | null): bo
   if (strengthFilter === 'High') return abv > 25;
 
   return true;
+}
+
+// Add flavor profile matching
+export function matchesFlavorProfile(drink: Drink, flavors: string[]): boolean {
+  if (!flavors.length) return true;
+  return flavors.some(flavor => 
+    drink.flavor_profile?.some(profile => 
+      profile.toLowerCase().includes(flavor.toLowerCase())
+    )
+  );
 }
 
 export function matchesRegion(drink: Drink, regionFilter: string | null): boolean {
@@ -195,4 +246,113 @@ export function filterDrinks(drinks: Drink[], filters: FilterState): Drink[] {
 
     return matchesCategory && matchesRegionFilter && matchesStrengthFilter && matchesSearchFilter;
   });
+}
+
+// Get all unique regions from drinks data
+export function extractRegions(drinks: Drink[]): string[] {
+  const regions = new Set<string>();
+  drinks.forEach(drink => {
+    const region = normalizeOriginToRegion(drink.origin);
+    if (region !== 'Other') regions.add(region);
+  });
+  return Array.from(regions).sort();
+}
+
+// Filter by multiple criteria with AND/OR support
+export function advancedDrinkFilter(
+  drinks: Drink[], 
+  criteria: {
+    categories?: string[];
+    regions?: string[];
+    minABV?: number;
+    maxABV?: number;
+    flavors?: string[];
+    availability?: string[];
+    settings?: string[];
+    searchTerm?: string;
+    matchAny?: boolean; // true = OR, false = AND (default)
+  }
+): Drink[] {
+  const {
+    categories = [],
+    regions = [],
+    minABV = 0,
+    maxABV = 100,
+    flavors = [],
+    availability = [],
+    settings = [],
+    searchTerm = '',
+    matchAny = false
+  } = criteria;
+
+  return drinks.filter(drink => {
+    const matches = [];
+
+    if (categories.length) {
+      matches.push(categories.includes(drink.category));
+    }
+
+    if (regions.length) {
+      matches.push(regions.includes(normalizeOriginToRegion(drink.origin)));
+    }
+
+    const abv = getABV(drink);
+    matches.push(abv >= minABV && abv <= maxABV);
+
+    if (flavors.length) {
+      matches.push(matchesFlavorProfile(drink, flavors));
+    }
+
+    if (availability.length) {
+      matches.push(drink.global_availability && 
+        availability.includes(drink.global_availability));
+    }
+
+    if (settings.length) {
+      matches.push(drink.typical_setting?.some(setting => 
+        settings.some(s => setting.toLowerCase().includes(s.toLowerCase()))
+      ) ?? false);
+    }
+
+    if (searchTerm) {
+      matches.push(matchesSearch(drink, searchTerm));
+    }
+
+    return matchAny 
+      ? matches.some(Boolean) // OR logic
+      : matches.every(Boolean); // AND logic
+  });
+}
+
+// Sort drinks by various criteria
+export function sortDrinks(
+  drinks: Drink[],
+  sortBy: 'name' | 'abv' | 'category' | 'region' = 'name',
+  ascending: boolean = true
+): Drink[] {
+  const sorted = [...drinks];
+  
+  sorted.sort((a, b) => {
+    let comparison = 0;
+    
+    switch (sortBy) {
+      case 'name':
+        comparison = a.name.localeCompare(b.name);
+        break;
+      case 'abv':
+        comparison = (getABV(a) - getABV(b));
+        break;
+      case 'category':
+        comparison = a.category.localeCompare(b.category);
+        break;
+      case 'region':
+        comparison = (normalizeOriginToRegion(a.origin) || '')
+          .localeCompare(normalizeOriginToRegion(b.origin) || '');
+        break;
+    }
+    
+    return ascending ? comparison : -comparison;
+  });
+  
+  return sorted;
 }

@@ -83,5 +83,46 @@
       <li>Clean — System Reset returns to fresh start</li>
     </ul>
   </section>
+
+  <section class="space-y-4">
+  <h2 class="text-xl font-semibold">Anticipated Reviewer Questions</h2>
+  <p class="text-gray-600 text-sm">Cross-disciplinary questions I expect when presenting this UX-first prototype.</p>
+
+  <div class="space-y-3 text-sm">
+    <div>
+      <h3 class="font-semibold text-softOrange">Business & Product</h3>
+      <ul class="list-disc ml-4">
+        <li>How will this make money?</li>
+        <li>What’s the business model?</li>
+        <li>Who is the target user?</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-softOrange">Cybersecurity</h3>
+      <ul class="list-disc ml-4">
+        <li>What data is collected?</li>
+        <li>Are there privacy risks?</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-softOrange">AI & ML</h3>
+      <ul class="list-disc ml-4">
+        <li>Where does AI fit into this?</li>
+        <li>Is this an AI-powered recommender?</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-softOrange">UX & Design</h3>
+      <ul class="list-disc ml-4">
+        <li>Why this flow?</li>
+        <li>Why semantic color systems?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 </div>
 </div>

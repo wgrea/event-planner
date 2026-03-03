@@ -2,7 +2,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import clubTypes from '$lib/data/club-types.json';
-  import drinkToClub from '$lib/data/mappings/drink-to-club.json';
   
   // Import all drink files
   import beerData from '$lib/data/drinks/beer.json';
@@ -12,7 +11,6 @@
   import fermentedData from '$lib/data/drinks/fermented-traditional.json';
   import nonAlcoholicData from '$lib/data/drinks/non-alcoholic.json';
   
-  import Breadcrumb from '$lib/components/safety/Breadcrumb.svelte';
   import SafetyCard from '$lib/components/safety/SafetyCard.svelte';
 
   const slug = $page.params.slug!;
@@ -33,6 +31,7 @@
     id: string;
     name: string;
     category: string;
+    subcategory?: string;
     origin?: string;
   };
 
@@ -49,10 +48,29 @@
     ...(nonAlcoholicData as Drink[])
   ];
 
-  // Get related drinks from mapping
-  const drinkMap = drinkToClub as unknown as Record<string, string[]>;
-  const relatedDrinkIds = drinkMap[club?.id || ''] ?? [];
-  const relatedDrinks = allDrinks.filter(d => relatedDrinkIds.includes(d.id));
+  // Helper function to find drinks by category
+  function findDrinksByCategories(categories: string[]): Drink[] {
+    if (!categories.length) return [];
+    
+    return allDrinks.filter(drink => {
+      return categories.some(category => {
+        const cat = category.toLowerCase();
+        return (
+          drink.category?.toLowerCase().includes(cat) ||
+          drink.subcategory?.toLowerCase().includes(cat) ||
+          drink.name?.toLowerCase().includes(cat) ||
+          (cat === 'whiskey' && drink.category === 'Spirits' && drink.name.toLowerCase().includes('whiskey')) ||
+          (cat === 'vodka' && drink.category === 'Spirits' && drink.name.toLowerCase().includes('vodka')) ||
+          (cat === 'rum' && drink.category === 'Spirits' && drink.name.toLowerCase().includes('rum')) ||
+          (cat === 'tequila' && drink.category === 'Spirits' && drink.name.toLowerCase().includes('tequila')) ||
+          (cat === 'beer' && drink.category === 'Beer') ||
+          (cat === 'cocktails' && drink.category === 'Cocktails')
+        );
+      });
+    });
+  }
+
+  $: relatedDrinks = club ? findDrinksByCategories(club.typical_drinks) : [];
 
   function formatPressure(pressure: string): string {
     const levels: Record<string, string> = {
@@ -66,6 +84,22 @@
   }
 </script>
 
+
+  <div class="mt-8 flex gap-4">
+    <a
+      href="/clubs"
+      class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition"
+    >
+      ← Back to all clubs
+    </a>
+    <a
+      href={`/clubs/${slug}/assess`}
+      class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition"
+    >
+      View Safety Assessment
+    </a>
+  </div>
+
 {#if !club}
   <div class="text-center py-12">
     <p class="text-gray-500 text-lg">Club type not found.</p>
@@ -74,7 +108,6 @@
     </a>
   </div>
 {:else}
-  <Breadcrumb current={club.name} />
 
   <div class="mb-6">
     <h1 class="text-3xl font-bold mb-2">{club.name}</h1>
@@ -120,21 +153,6 @@
       <p>{club.social_expectations || 'No social expectations data available'}</p>
     </SafetyCard>
 
-    <!-- Typical Drinks -->
-    <SafetyCard title="Typical Drinks">
-      {#if relatedDrinks.length > 0}
-        <div class="flex flex-wrap gap-2">
-          {#each relatedDrinks as drink}
-            <a href={`/drinks/${drink.id}`} class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm hover:bg-purple-100">
-              {drink.name}
-            </a>
-          {/each}
-        </div>
-      {:else}
-        <p class="text-gray-500">No typical drinks data available</p>
-      {/if}
-    </SafetyCard>
-
     <!-- Cultural Notes -->
     {#if club.cultural_notes}
       <SafetyCard title="Cultural Notes">
@@ -143,18 +161,4 @@
     {/if}
   </div>
 
-  <div class="mt-8 flex gap-4">
-    <a
-      href={`/clubs/${slug}/assess`}
-      class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition"
-    >
-      View Safety Assessment
-    </a>
-    <a
-      href="/clubs"
-      class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition"
-    >
-      ← Back to all clubs
-    </a>
-  </div>
 {/if}

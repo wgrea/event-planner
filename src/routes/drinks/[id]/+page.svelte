@@ -10,12 +10,12 @@
   import fermentedData from '$lib/data/drinks/fermented-traditional.json';
   import nonAlcoholicData from '$lib/data/drinks/non-alcoholic.json';
   
-  import Breadcrumb from '$lib/components/safety/Breadcrumb.svelte';
   import SafetyCard from '$lib/components/safety/SafetyCard.svelte';
 
   const id = $page.params.id!;
 
   // Define the full Drink type based on your actual data structure
+  // I think some of these types are not being used the same way as the other types so they are not showing up on the screen
   type Drink = {
     id: string;
     name: string;
@@ -31,6 +31,8 @@
     consumption_patterns?: string[];
     regional_identity?: string;
     legal_notes?: string;
+    risk_factors?: string[];        // Add this
+    recommendations?: string[];      // Add this
   };
 
   // Combine all drinks
@@ -51,10 +53,28 @@
       case 'widespread': return '🌎';
       case 'regional': return '🌍';
       case 'local': return '🌏';
+      case 'rare': return '🔍';
+      case 'emerging': return '🌱';
       default: return '🌐';
     }
   }
 </script>
+
+  <!-- Action Buttons -->
+  <div class="mt-8 flex gap-4">
+    <a
+      href="/drinks"
+      class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition"
+    >
+      ← Back to all drinks
+    </a>
+    <a
+      href={`/drinks/${id}/assess`}
+      class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition"
+    >
+      View Safety Assessment
+    </a>
+  </div>
 
 {#if !drink}
   <div class="text-center py-12">
@@ -64,7 +84,6 @@
     </a>
   </div>
 {:else}
-  <Breadcrumb current={drink.name} />
 
   <!-- Header with basic info -->
   <div class="mb-6">
@@ -165,19 +184,4 @@
     {/if}
   </div>
 
-  <!-- Action Buttons -->
-  <div class="mt-8 flex gap-4">
-    <a
-      href={`/drinks/${id}/assess`}
-      class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition"
-    >
-      View Safety Assessment
-    </a>
-    <a
-      href="/drinks"
-      class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg hover:bg-gray-300 transition"
-    >
-      ← Back to all drinks
-    </a>
-  </div>
 {/if}

@@ -20,5 +20,5 @@
     text-[10px] leading-tight font-semibold text-center px-2
   "
 >
-  View Safety<br/>Assessment
+  View Service<br/>Design
 </a>

@@ -6,7 +6,6 @@
   import barTypesJson from '$lib/data/bar-types.json';
   import eventTypesJson from '$lib/data/event-types.json';
   import clubTypesJson from '$lib/data/club-types.json';
-  import mockConsumption from '$lib/data/mock-country-consumption.json';
 
   import Header from '$lib/components/home/Header.svelte';
   import CategoryGrid from '$lib/components/home/CategoryGrid.svelte';
@@ -18,7 +17,6 @@
   const clubTypes = clubTypesJson as ClubType[];
 
   type CountryConsumption = { code: string; liters: number };
-  const consumption = mockConsumption as CountryConsumption[];
 
   // Makes sense to have data here since it's more global. 
   // Maybe I should add this to the drinks database and not have this separate since I think users may expect what is drank everywhere to be in the database page

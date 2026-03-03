@@ -11,6 +11,8 @@
   };
 
   const bars = barTypes as BarType[];
+
+  
 </script>
 
 <!-- Sticky header using the Bars identity color -->
