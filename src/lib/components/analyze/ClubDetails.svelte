@@ -1,3 +1,4 @@
+<!-- src/lib/components/analyze/ClubDetails.svelte -->
 <script lang="ts">
   import SafetyCard from '$lib/components/safety/Card.svelte';
   export let club: any;
