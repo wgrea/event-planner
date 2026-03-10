@@ -1,0 +1,25 @@
+[
+  {
+    "id": "edm-club",
+    "name": "EDM Club",
+    "slug": "edm-club",
+    "type": "club",
+    "vibe": ["bass-heavy", "immersive", "high-energy"],
+    "music_identity": ["electronic", "house", "techno"],
+    "interaction_intensity": {
+      "level": "high",
+      "label": "High Pressure",
+      "description": "The 'current' of the dance floor is strong; standing still can feel socially awkward in high-traffic zones."
+    },
+    "social_expectations": "Focus is primarily on the DJ; verbal conversation is minimal on the dance floor.",
+    "solo_comfort": 6,
+    "solo_tips": ["Identify 'chill-out' zones immediately upon arrival.", "Ear protection is essential for maintaining solo comfort."],
+    "safety_factors": {
+      "level": "high",
+      "label": "High Risk",
+      "description": "High sensory intensity and crowd-crush potential during headliner sets."
+    },
+    "physical_proximity": "Constant incidental contact; very high density on the main floor.",
+    "recommendations": ["Locate the free water station immediately", "Identify two exit routes"]
+  }
+]

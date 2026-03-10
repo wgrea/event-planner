@@ -1,0 +1,206 @@
+/* src/lib/styles/components.css */
+/* ===========================
+   Global Background
+   =========================== */
+
+body {
+  @apply bg-[#FFF7ED]; /* soft orange */
+}
+
+/* ===========================
+   Layout
+   =========================== */
+
+.page {
+  @apply max-w-xl mx-auto p-6 md:max-w-2xl;
+}
+
+.section {
+  @apply mb-10;
+}
+
+/* ===========================
+   Typography
+   =========================== */
+
+.section-title {
+  @apply text-2xl font-semibold text-[#7A4A00]
+         drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)]
+         mb-4;
+}
+
+.subtle-text {
+  @apply text-gray-600;
+}
+
+/* ===========================
+   Cards
+   =========================== */
+
+.card {
+  @apply p-4 rounded-xl shadow-sm border border-gray-200 bg-white;
+}
+
+.drank-everywhere-card {
+  @apply p-2 rounded-lg bg-white border border-gray-200 shadow-sm;
+}
+
+.drink-grid-card {
+  @apply p-4 rounded-xl bg-white border border-gray-200 shadow-sm;
+}
+
+.stat-card {
+  @apply p-4 rounded-xl shadow-sm border border-blue-200 bg-blue-100 text-center;
+}
+
+/* Category-specific tints */
+.bar-tint {
+  @apply bg-green-50 border-green-100;
+}
+
+.club-tint {
+  @apply bg-purple-50 border-purple-100;
+}
+
+.event-tint {
+  @apply bg-yellow-50 border-yellow-100;
+}
+
+.drink-tint {
+  @apply bg-yellow-50 border-yellow-100;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+
+.back-button {
+  @apply inline-block mb-4 text-blue-700 font-semibold 
+         drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)];
+}
+
+.button-primary {
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm
+         bg-[#FFF7ED] text-blue-700 border border-[#FFF7ED]
+         drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)];
+}
+
+.button-secondary {
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+         bg-blue-50 text-blue-800 border border-blue-200;
+}
+
+.button-tertiary {
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+         bg-gray-50 text-gray-700 border border-gray-200;
+}
+
+/* Legacy mappings */
+.big-button {
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm 
+         bg-blue-50 text-blue-800 border border-blue-200;
+}
+
+.view-all {
+  @apply block p-4 rounded-xl text-center font-semibold shadow-sm
+         bg-gray-50 text-gray-700 border border-gray-200;
+}
+
+/* Floating Safety Button */
+.safety-button {
+  @apply fixed bottom-6 right-6 w-16 h-16 rounded-full flex items-center justify-center
+         bg-[#F59E0B] text-white shadow-lg shadow-orange-300/40 border border-orange-500;
+}
+
+/* ===========================
+   Grids
+   =========================== */
+
+.category-grid {
+  @apply grid grid-cols-3 gap-4 md:grid-cols-4;
+}
+
+.button-grid {
+  @apply grid gap-4;
+}
+
+.drank-list {
+  @apply grid gap-3;
+}
+
+.stats-grid {
+  @apply grid grid-cols-2 gap-4 my-4;
+}
+
+.country-grid {
+  @apply grid grid-cols-7 gap-2 text-center font-semibold mb-4;
+}
+
+/* ===========================
+   Inputs
+   =========================== */
+
+.search-input {
+  @apply w-full p-3 rounded-lg border border-gray-300 my-4;
+}
+
+/* ===========================
+   Tabs
+   =========================== */
+
+.tab-row {
+  @apply flex gap-2 mb-4;
+}
+
+.tab {
+  @apply flex-1 p-2 rounded-lg bg-gray-200 font-semibold text-center;
+}
+
+.tab-active {
+  @apply bg-blue-300 text-blue-900;
+}
+
+/* ===========================
+   Tables
+   =========================== */
+
+.consumption-table {
+  @apply w-full border-collapse my-4 text-sm;
+}
+
+.consumption-table th {
+  @apply text-left font-semibold text-gray-700 border-b border-gray-300 p-2;
+}
+
+.consumption-table td {
+  @apply border-b border-gray-200 p-2;
+}
+
+
+/*
+  New
+*/
+
+/* src/lib/styles/components.css updates */
+
+/* Deep Brown for all primary titles and data */
+.text-vibe-brown {
+  @apply text-[#7A4A00];
+}
+
+/* Functional Blue for navigation */
+.text-vibe-blue {
+  @apply text-blue-700 font-semibold;
+}
+
+/* Updated Button for "View Safety Assessment" */
+.button-action-orange {
+  @apply block w-full p-4 mt-6 rounded-xl text-center font-bold shadow-sm
+         bg-[#FFEDD5] text-[#7A4A00] border border-[#FED7AA]
+         hover:bg-[#FED7AA] transition-colors;
+}
+
+/* Unified Container for Analyze/Assess Pages */
+.content-card-container {
+  @apply bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-4;
+}

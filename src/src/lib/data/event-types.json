@@ -1,0 +1,77 @@
+[
+  {
+    "id": "bar-crawls-pub-crawls",
+    "name": "Bar Crawls",
+    "slug": "bar-crawls-pub-crawls",
+    "type": "event",
+    "plan_night_around": false,
+    "interaction_intensity": {
+      "level": "high",
+      "label": "Moderate-High Pressure",
+      "description": "High momentum; the expectation to move with the group can feel pressured if you prefer a slower pace."
+    },
+    "social_dynamics": "Moving group energy, shared mission, collective decision-making.",
+    "typical_drinks": ["Draft Beer", "Batch Cocktails", "Shots"],
+    "solo_comfort": 9,
+    "solo_tips": [
+      "Introduce yourself to the organizer immediately; they are your safety anchor.", 
+      "Keep a digital copy of the route so you don't have to rely on following the crowd."
+    ],
+    "safety_factors": {
+      "level": "moderate-high",
+      "label": "Moderate-High Risk",
+      "description": "Moderate-high due to rapid venue transitions and the likelihood of getting separated from the main group."
+    },
+    "physical_proximity": "Frequent contact during transitions and while moving through narrow doors.",
+    "recommendations": [
+      "Set a meeting point with a friend if you get separated", 
+      "Carry a portable charger for long routes"
+    ]
+  },
+  {
+    "id": "singles-mixer",
+    "name": "Singles Mixer",
+    "slug": "singles-mixer",
+    "type": "event",
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "moderate",
+      "label": "Moderate Pressure",
+      "description": "Icebreakers are the norm; there is a social expectation to engage, but it is structured rather than chaotic."
+    },
+    "social_dynamics": "Rotational seating or facilitated introductions; everyone is there with the same intent.",
+    "typical_drinks": ["Wine", "Craft Cocktails", "Mocktails"],
+    "solo_comfort": 10,
+    "solo_tips": ["Arrive on time; the first 20 minutes are the easiest for facilitated entries.", "The bar area is the best 'buffer' if you need a breather between rotations."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Low risk; usually a ticketed event with an organizer present to manage behavior."
+    },
+    "physical_proximity": "Controlled; choices between seated conversation and standing 'mingle zones'.",
+    "recommendations": ["Prepare a 30-second 'about me' to lower entry anxiety", "Follow up with the organizer if you feel uncomfortable."]
+  },
+  {
+    "id": "structured-dance-lessons",
+    "name": "Structured Dance Lessons",
+    "slug": "structured-dance-lessons",
+    "type": "event",
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "moderate",
+      "label": "Moderate Pressure",
+      "description": "Focus is on learning; pressure is technical rather than purely social."
+    },
+    "social_dynamics": "Partner rotation is standard; you'll naturally interact with the whole room through the lesson.",
+    "typical_drinks": ["Water", "Light Beer", "Seltzer"],
+    "solo_comfort": 10,
+    "solo_tips": ["No partner is needed; the rotation ensures you are never left out.", "Wear smooth-soled shoes to make the physical interaction easier."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Low risk; professional environment with clear boundaries and instruction."
+    },
+    "physical_proximity": "High; requires direct hand/arm contact during the lesson.",
+    "recommendations": ["Focus on the steps first to reduce social 'noise'", "Hydrate—it's more of a workout than it looks."]
+  }
+]

@@ -1,0 +1,6 @@
+/* src/app.css */
+/* Import custom component classes FIRST */
+@import '$lib/styles/components.css';
+
+/* Then Tailwind v4 */
+@import "tailwindcss";

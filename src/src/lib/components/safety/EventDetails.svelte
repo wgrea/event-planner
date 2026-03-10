@@ -1,0 +1,74 @@
+<!-- src/lib/components/safety/EventDetails.svelte -->
+<script lang="ts">
+  import SafetyCard from '$lib/components/safety/Card.svelte';
+  export let event: any;
+
+  $: soloStars = event?.solo_comfort ? Math.round(event.solo_comfort / 2) : 0;
+</script>
+
+<SafetyCard title="Solo Comfort & Strategy">
+  <div class="flex items-center gap-2 mb-4">
+    <div class="flex">
+      {#each [1, 2, 3, 4, 5] as i}
+        <span class="text-xl {i <= soloStars ? 'text-yellow-400' : 'text-gray-300'}">★</span>
+      {/each}
+    </div>
+    <span class="text-sm text-gray-500 font-medium">({soloStars}/5)</span>
+  </div>
+
+  {#if event.solo_tips?.length}
+    <ul class="list-disc ml-5 space-y-2 text-sm text-vibe-brown">
+      {#each event.solo_tips as tip}
+        <li>{tip}</li>
+      {/each}
+    </ul>
+  {/if}
+</SafetyCard>
+
+<SafetyCard title="Environment & Safety Factors">
+  <div class="space-y-4">
+    <div class="flex items-center gap-2">
+      <span
+        class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter border
+        {event.safety_factors.level === 'high'
+          ? 'bg-red-50 text-red-700 border-red-200'
+          : event.safety_factors.level === 'moderate' || event.safety_factors.level === 'moderate-high'
+          ? 'bg-orange-50 text-orange-700 border-orange-200'
+          : 'bg-blue-50 text-blue-700 border-blue-200'}"
+      >
+        {event.safety_factors.label}
+      </span>
+    </div>
+
+    <p class="text-sm text-vibe-brown leading-relaxed">
+      {event.safety_factors.description || event.safety_notes?.[0]}
+    </p>
+
+    {#if event.safety_notes?.length > 1}
+      <ul class="list-disc ml-5 space-y-1 text-xs text-gray-500">
+        {#each event.safety_notes.slice(1) as note}
+          <li>{note}</li>
+        {/each}
+      </ul>
+    {/if}
+  </div>
+</SafetyCard>
+
+<SafetyCard title="Recommended Actions">
+  <ul class="list-disc ml-5 space-y-1 text-sm text-vibe-brown">
+    {#each event.recommendations ?? [] as rec}
+      <li>{rec}</li>
+    {:else}
+      <li>Stay aware of your surroundings and have a transport plan</li>
+    {/each}
+  </ul>
+</SafetyCard>
+
+{#if event.physical_proximity || event.touch_level}
+  <div class="mt-4 px-4 py-3 bg-gray-50 rounded-lg border border-gray-100">
+    <p class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">Physical Proximity</p>
+    <p class="text-xs text-gray-600 leading-snug">
+      {event.physical_proximity || event.touch_level}
+    </p>
+  </div>
+{/if}
