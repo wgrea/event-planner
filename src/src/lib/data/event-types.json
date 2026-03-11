@@ -4,6 +4,7 @@
     "name": "Bar Crawls",
     "slug": "bar-crawls-pub-crawls",
     "type": "event",
+    "global_availability": "regional",
     "plan_night_around": false,
     "interaction_intensity": {
       "level": "high",
@@ -29,33 +30,11 @@
     ]
   },
   {
-    "id": "singles-mixer",
-    "name": "Singles Mixer",
-    "slug": "singles-mixer",
-    "type": "event",
-    "plan_night_around": true,
-    "interaction_intensity": {
-      "level": "moderate",
-      "label": "Moderate Pressure",
-      "description": "Icebreakers are the norm; there is a social expectation to engage, but it is structured rather than chaotic."
-    },
-    "social_dynamics": "Rotational seating or facilitated introductions; everyone is there with the same intent.",
-    "typical_drinks": ["Wine", "Craft Cocktails", "Mocktails"],
-    "solo_comfort": 10,
-    "solo_tips": ["Arrive on time; the first 20 minutes are the easiest for facilitated entries.", "The bar area is the best 'buffer' if you need a breather between rotations."],
-    "safety_factors": {
-      "level": "low",
-      "label": "Low Risk",
-      "description": "Low risk; usually a ticketed event with an organizer present to manage behavior."
-    },
-    "physical_proximity": "Controlled; choices between seated conversation and standing 'mingle zones'.",
-    "recommendations": ["Prepare a 30-second 'about me' to lower entry anxiety", "Follow up with the organizer if you feel uncomfortable."]
-  },
-  {
     "id": "structured-dance-lessons",
     "name": "Structured Dance Lessons",
     "slug": "structured-dance-lessons",
     "type": "event",
+    "is_dance": true,
     "plan_night_around": true,
     "interaction_intensity": {
       "level": "moderate",
@@ -73,5 +52,349 @@
     },
     "physical_proximity": "High; requires direct hand/arm contact during the lesson.",
     "recommendations": ["Focus on the steps first to reduce social 'noise'", "Hydrate—it's more of a workout than it looks."]
+  },
+  {
+  "id": "singles-mixer",
+  "name": "Singles Mixer",
+  "slug": "singles-mixer",
+  "type": "event",
+  "global_availability": "regional",
+  "plan_night_around": true,
+  "interaction_intensity": {
+    "level": "high",
+    "label": "Active Socializing",
+    "description": "Implicit expectation to engage. Most people are there specifically to be approached or to approach others."
+  },
+  "social_dynamics": "Fluid, rotating conversations; frequent ice-breaking; varying levels of vulnerability.",
+  "typical_drinks": ["Wine", "Sparkling Water", "Easy-to-hold Cocktails"],
+  "solo_comfort": 8,
+  "solo_tips": [
+    "Arrive 15 minutes early; it is easier to start conversations as people trickle in than to break into established circles.", 
+    "Have a 'standard' intro ready to reduce cognitive load during the first few interactions."
+  ],
+  "safety_factors": {
+    "level": "low-moderate",
+    "label": "Low-Moderate Risk",
+    "description": "Usually a vetted environment, but requires personal boundaries regarding sharing contact information."
+  },
+  "physical_proximity": "Constant face-to-face interaction; varying personal space boundaries.",
+  "recommendations": [
+    "Use a Google Voice number for initial contact sharing", 
+    "Take 'social breaks' by heading to the restroom or bar to reset your energy"
+  ]
+},
+  {
+    "id": "bachata-social",
+    "name": "Bachata Social",
+    "slug": "bachata-social",
+    "type": "event",
+    "is_cultural": true,
+    "is_dance": true,
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "high",
+      "label": "Physical Connection",
+      "description": "Requires close physical proximity with partners. High focus on 'the lead' and 'the follow'."
+    },
+    "social_dynamics": "Rotational partner dancing; brief but intimate interactions; technical skill-sharing.",
+    "typical_drinks": ["Water", "Light Beer", "Mojitos"],
+    "solo_comfort": 8,
+    "solo_tips": ["Attend the 'pre-social' lesson to meet people before the floor gets crowded.", "Standing near the edge of the floor is the universal signal that you are looking for a dance."],
+    "safety_factors": {
+      "level": "low-moderate",
+      "label": "Low Risk",
+      "description": "Generally respectful community, though close physical contact requires clear personal boundaries."
+    },
+    "physical_proximity": "Very high; chest-to-chest or hand-to-hand contact is standard.",
+    "recommendations": ["Prioritize personal hygiene (mints/deodorant)", "Wear shoes with suede or smooth soles"]
+  },
+  {
+    "id": "kizomba-social",
+    "name": "Kizomba Social",
+    "slug": "kizomba-social",
+    "type": "event",
+    "global_availability": "rare",
+    "is_dance": true,
+    "is_cultural": true,
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "very-high",
+      "label": "High Intimacy",
+      "description": "Known for a 'grounded' and very close connection. Can feel intense for solo newcomers."
+    },
+    "social_dynamics": "Slow, rhythmic, and highly focused on the partner connection over 'flashy' moves.",
+    "typical_drinks": ["Cocktails", "Water", "Wine"],
+    "solo_comfort": 7,
+    "solo_tips": ["Closing your eyes can help you focus on the rhythm if you feel self-conscious solo.", "It’s okay to say no to a dance if the 'vibe' doesn't feel safe."],
+    "safety_factors": {
+      "level": "low-moderate",
+      "label": "Close Contact Risk",
+      "description": "Low physical danger, but the level of intimacy requires high comfort with personal space."
+    },
+    "physical_proximity": "Maximum; often involves a 'temple-to-temple' connection.",
+    "recommendations": ["Focus on your breath to stay relaxed during close dances"]
+  },
+  {
+    "id": "salsa-social-dance",
+    "name": "Salsa Social Dance",
+    "slug": "salsa-social-dance",
+    "type": "event",
+    "is_cultural": true,
+    "is_dance": true,
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "high",
+      "label": "Fast-Paced Socializing",
+      "description": "High energy and fast footwork. Socializing happens rapidly between 4-minute songs."
+    },
+    "social_dynamics": "Extremely social; frequent partner swapping; visible 'levels' of expertise on the floor.",
+    "typical_drinks": ["Aguardiente", "Rum & Coke", "Water"],
+    "solo_comfort": 9,
+    "solo_tips": ["Nod or smile at the DJs; they often know who the friendly regulars are.", "If you're a 'follow,' keep your hand visible to be asked to dance."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Moderate Risk",
+      "description": "Risk of being stepped on or elbowed during fast turns in a crowded room."
+    },
+    "physical_proximity": "High; constant movement and spinning in a defined 'slot'.",
+    "recommendations": ["Watch your elbows in tight spaces", "Stay hydrated between fast sets"]
+  },
+  {
+    "id": "swing-dance",
+    "name": "Swing Dance",
+    "slug": "swing-dance",
+    "type": "event",
+    "is_dance": true,
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "moderate-high",
+      "label": "Athletic Social",
+      "description": "Bouncy and energetic. Interaction is often lighthearted and less 'intimate' than Latin styles."
+    },
+    "social_dynamics": "Vintage aesthetic common; very welcoming to beginners; community-centric.",
+    "typical_drinks": ["Craft Soda", "Beer", "Old Fashioned"],
+    "solo_comfort": 9,
+    "solo_tips": ["The 'birthday dance' or 'jam circle' is a great time to cheer and feel included without a partner.", "Wear vintage-inspired gear to immediately feel like part of the subculture."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Physical Risk",
+      "description": "Kicks and 'aerials' (if allowed) can cause accidental contact."
+    },
+    "physical_proximity": "Moderate; arms-length to close-hold, but with lots of dynamic movement.",
+    "recommendations": ["Avoid 'aerial' moves unless you have a designated partner"]
+  },
+  {
+    "id": "concert-music-festival",
+    "name": "Concert or Music Festival",
+    "slug": "concert-music-festival",
+    "type": "event",
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "low-moderate",
+      "label": "Spectator Focused",
+      "description": "Primary interaction is with the stage. Socializing is incidental or happens in lines."
+    },
+    "social_dynamics": "Shared fandom; 'we're all here for the band' mentality makes it easy to chat with neighbors.",
+    "typical_drinks": ["Overpriced Beer", "Canned Cocktails", "Water"],
+    "solo_comfort": 10,
+    "solo_tips": ["Bring a portable battery; losing your phone at a festival is a solo traveler's nightmare.", "The 'front-of-house' sound booth usually has the best view and the most respectful fans."],
+    "safety_factors": {
+      "level": "high",
+      "label": "High Crowd Risk",
+      "description": "Heat exhaustion, crowd-surge, and long distances between exits."
+    },
+    "physical_proximity": "Extreme in the 'pit'; spacious in the 'lawn' or back sections.",
+    "recommendations": ["Take a photo of the parking section or shuttle stop", "Use the 'buddy system' with a remote contact (check-ins)"]
+  },
+  {
+    "id": "expat-nomad-meetup",
+    "name": "Expat & Digital Nomad Meetups",
+    "slug": "expat-nomad-meetup",
+    "type": "event",
+    "global_availability": "rare",
+    "is_cultural": true,
+    "plan_night_around": false,
+    "interaction_intensity": {
+      "level": "high",
+      "label": "High Verbal Interaction",
+      "description": "Heavy focus on networking and life-story sharing. Expect to answer 'where are you from?' frequently."
+    },
+    "social_dynamics": "Inclusive but transient; high turnover of people; immediate common ground (travel/work).",
+    "typical_drinks": ["Local Lager", "Coffee", "Cocktails"],
+    "solo_comfort": 10,
+    "solo_tips": ["Wear something that represents your hometown or a recent trip; it’s a magnet for fellow travelers.", "Look for the 'organizer' badge if you feel lost."],
+    "safety_factors": {
+      "level": "low-moderate",
+      "label": "Low Risk",
+      "description": "Generally safe, public locations; keep an eye on your laptop/tech bag if bringing work gear."
+    },
+    "physical_proximity": "Moderate; typical of a crowded cafe or hotel lobby.",
+    "recommendations": ["Have a digital business card or QR code ready", "Don't feel pressured to stay if the 'career talk' gets too heavy"]
+  },
+  {
+    "id": "ecstatic-dance",
+    "name": "Ecstatic Dance / Movement Jam",
+    "slug": "ecstatic-dance",
+    "type": "event",
+    "global_availability": "rare",
+    "is_dance": true,
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "low-verbal",
+      "label": "Non-Verbal Social",
+      "description": "Strict 'no-talking' rules on the floor. Interaction is purely through movement and eye contact."
+    },
+    "social_dynamics": "High vulnerability; 'dance like no one is watching'; communal but solitary.",
+    "typical_drinks": ["Cacao", "Kombucha", "Electrolyte Water"],
+    "solo_comfort": 9,
+    "solo_tips": ["The 'opening circle' is mandatory for the vibe; don't skip it.", "If you want to dance alone, simply keep your eyes closed or look at the floor."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Drug and alcohol-free environments; high emphasis on 'consent' and personal space."
+    },
+    "physical_proximity": "Variable; can range from wide-open space to intense, swirling crowds.",
+    "recommendations": ["Bring a reusable water bottle", "Wear layers—you will get hot, then cool down quickly"]
+  },
+  {
+    "id": "potluck-private-dinner",
+    "name": "Potluck / Private Dinner Party",
+    "slug": "potluck-private-dinner",
+    "type": "event",
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "high",
+      "label": "Intimate Social",
+      "description": "Harder to 'hide' in a small group. Requires active participation in conversation and dining."
+    },
+    "social_dynamics": "Domestic; collaborative; high focus on hospitality and shared contribution.",
+    "typical_drinks": ["BYOB", "Home-made Punch", "Wine"],
+    "solo_comfort": 6,
+    "solo_tips": ["Volunteer to help with the dishes or serving; it gives you a 'task' if conversation lulls.", "Bring a dish that has a story behind it to act as a conversation starter."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Personal Risk",
+      "description": "Higher risk if you don't know the host well; always share the address with a friend before entering a private residence."
+    },
+    "physical_proximity": "High; shoulder-to-shoulder at a dining table.",
+    "recommendations": ["Always ask the host about allergy-safe zones for your dish"]
+  },
+  {
+    "id": "cultural-festival",
+    "name": "Cultural Events & Festivals",
+    "slug": "cultural-festival",
+    "type": "event",
+    "is_cultural": true,
+    "plan_night_around": false,
+    "interaction_intensity": {
+      "level": "moderate",
+      "label": "Observational Social",
+      "description": "Low pressure to talk. Most interaction is transactional (buying food) or observational (watching performances)."
+    },
+    "social_dynamics": "Family-friendly; community pride; educational and sensory-heavy.",
+    "typical_drinks": ["Regional Specialties", "Local Soda", "Imported Beer"],
+    "solo_comfort": 10,
+    "solo_tips": ["Follow the longest food line—it’s usually the best 'event' of the festival.", "Check the stage schedule to time your arrival for the main performance."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Environmental Risk",
+      "description": "High sun exposure, uneven terrain (parks), and large crowds of all ages."
+    },
+    "physical_proximity": "High in food lines; spacious in viewing areas.",
+    "recommendations": ["Carry cash as some stalls may not take cards", "Identify the first-aid tent upon arrival"]
+  },
+  {
+    "id": "pub-trivia",
+    "name": "Pub Trivia",
+    "slug": "pub-trivia",
+    "type": "event",
+    "global_availability": "widespread",
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "moderate-high",
+      "label": "Team-Based Social",
+      "description": "Inherently collaborative. While you can play solo, the format strongly encourages joining or forming a team."
+    },
+    "social_dynamics": "Intellectual teamwork, friendly competition, and shared 'aha!' moments.",
+    "typical_drinks": ["Pitchers of Beer", "Cider", "Soda"],
+    "solo_comfort": 7,
+    "solo_tips": ["Ask the host if any teams are looking for an extra player; many groups love a 'specialist' addition.", "Playing solo at the bar rail is a great way to test your knowledge without the pressure of a group."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Generally very safe; the crowd is focused on the game rather than heavy intoxication."
+    },
+    "physical_proximity": "Moderate; usually seated at tables or crowded around a bar section.",
+    "recommendations": ["Put your phone away during rounds to avoid 'cheating' accusations", "Arrive 30 minutes early to secure a seat"]
+  },
+  {
+    "id": "karaoke-night",
+    "name": "Karaoke Night",
+    "slug": "karaoke-night",
+    "type": "event",
+    "global_availability": "widespread",
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "high",
+      "label": "Performative Social",
+      "description": "High visibility. Whether you are singing or cheering, you are part of the 'show'."
+    },
+    "social_dynamics": "Supportive and loud; shared humor; the 'bad' singers are often cheered as much as the 'good' ones.",
+    "typical_drinks": ["Liquid Courage (Shots)", "Honey-Lemon Tea", "Long Island Iced Tea"],
+    "solo_comfort": 8,
+    "solo_tips": ["The KJ (Karaoke Jockey) is the gatekeeper; tip them or chat with them early to feel more comfortable.", "Pick a 'crowd-pleaser' song if you want to break the ice with the whole room at once."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Moderate Risk",
+      "description": "Can involve high intoxication levels; stage areas can be dark and have trip hazards (cords)."
+    },
+    "physical_proximity": "High; everyone gravitates toward the stage or the lyrics monitor.",
+    "recommendations": ["Don't 'mic-drop'—it's expensive equipment", "Check the song book digitally if possible to save time"]
+  },
+  {
+    "id": "sports-viewing-party",
+    "name": "Sports Viewing Party",
+    "slug": "sports-viewing-party",
+    "type": "event",
+    "global_availability": "widespread",
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "moderate",
+      "label": "Collective Focus",
+      "description": "Socializing is punctuated by the game. Interaction is easy because you have a constant 'topic' on the screen."
+    },
+    "social_dynamics": "High-fiving strangers; shared frustration/elation; rhythmic chanting or cheering.",
+    "typical_drinks": ["Domestic Drafts", "Wings & Platters", "Buckets of Beer"],
+    "solo_comfort": 9,
+    "solo_tips": ["Sitting at the bar is the solo gold standard here; you’re surrounded by other fans and the bartender.", "Even if you don't know the sport, asking a neighbor to explain a 'call' is a perfect icebreaker."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Moderate Risk",
+      "description": "Emotions can run high during losses; watch out for spilled drinks and exuberant physical movements."
+    },
+    "physical_proximity": "High density; often shoulder-to-shoulder during 'Big Games'."
+  },
+  {
+    "id": "open-mic-night",
+    "name": "Open Mic Night",
+    "slug": "open-mic-night",
+    "type": "event",
+    "plan_night_around": true,
+    "interaction_intensity": {
+      "level": "moderate",
+      "label": "Supportive Spectator",
+      "description": "Low pressure for the audience, but high respect for the performer is expected."
+    },
+    "social_dynamics": "Eclectic; creative; supportive but can have 'cringe' moments that create a shared sense of empathy in the room.",
+    "typical_drinks": ["Cheap Beer", "Coffee", "Well-Drinks"],
+    "solo_comfort": 10,
+    "solo_tips": ["Bring a small notebook; you'll look like a critic or a fellow artist, which fits the 'solo' vibe perfectly.", "The back of the room is usually where other performers hang out—great for low-key networking."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Usually intimate, well-lit settings with a focus on the performance."
+    },
+    "physical_proximity": "Moderate; usually seated in rows or small clusters.",
+    "recommendations": ["Don't talk while someone is on stage", "Have some small bills ready for a 'tip jar' for the artists"]
   }
 ]

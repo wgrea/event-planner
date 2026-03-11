@@ -18,7 +18,7 @@
 
   <div class="flex flex-wrap gap-2 text-sm text-vibe-brown/80 mb-3">
     {#if drink.origin}
-      <span>🌍 {drink.origin}</span>
+      <span>🌍 {typeof drink.origin === 'object' ? (drink.origin as any).region : drink.origin}</span>
     {/if}
     {#if drink.alcohol_percentage}
       <span>🍷 {drink.alcohol_percentage}% ABV</span>

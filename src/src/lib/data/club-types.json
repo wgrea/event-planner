@@ -4,6 +4,8 @@
     "name": "EDM Club",
     "slug": "edm-club",
     "type": "club",
+    "global_availability": "regional",
+    "is_dance": true,
     "vibe": ["bass-heavy", "immersive", "high-energy"],
     "music_identity": ["electronic", "house", "techno"],
     "interaction_intensity": {
@@ -21,5 +23,63 @@
     },
     "physical_proximity": "Constant incidental contact; very high density on the main floor.",
     "recommendations": ["Locate the free water station immediately", "Identify two exit routes"]
+  },
+  {
+    "id": "rave-electronic-event",
+    "name": "Rave / Electronic Music Event",
+    "slug": "rave-electronic-event",
+    "type": "club",
+    "is_dance": true,
+    "vibe": ["industrial", "neon", "maximalist", "unfiltered"],
+    "music_identity": ["techno", "trance", "hardstyle", "drum and bass"],
+    "interaction_intensity": {
+      "level": "low-moderate",
+      "label": "Music-First",
+      "description": "The focus is on the sound and light production. Socializing is optional and often happens in 'chill' side-rooms."
+    },
+    "social_expectations": "PLUR (Peace, Love, Unity, Respect) culture; high acceptance of solo dancers and unique fashion.",
+    "solo_comfort": 9,
+    "solo_tips": ["Flow toys (like LED hoops) are a great non-verbal way to exist in the space.", "Check the 'set times' so you don't burn out before the headliner."],
+    "safety_factors": {
+      "level": "high",
+      "label": "High Sensory Risk",
+      "description": "Extreme volume and strobe lighting; potential for dehydration in high-density areas."
+    },
+    "physical_proximity": "Variable; tight on the floor, but usually spacious at the perimeter.",
+    "recommendations": ["Invest in high-fidelity earplugs", "Hydrate at least 20oz of water per hour of dancing"]
+  },
+  {
+    "id": "bollywood-club-night",
+    "name": "Bollywood Club Night",
+    "slug": "bollywood-club-night",
+    "type": "club",
+    "global_availability": "rare",
+    "is_dance": true,
+    "is_cultural": true,
+    "vibe": ["glamorous", "high-production", "maximalist", "joyful"],
+    "music_identity": ["bollywood", "urban desi", "edm-fusion"],
+    "interaction_intensity": {
+      "level": "moderate-high",
+      "label": "Group-Centric",
+      "description": "High energy on the floor. While groups are common, solo attendees can easily blend into the collective choreography."
+    },
+    "social_dynamics": "Performative and celebratory; heavy focus on dancing and fashion.",
+    "social_expectations": "Expressive dancing, group energy, and fashion-forward presentation.",
+    "typical_drinks": ["Cocktails", "Beer", "Mocktails"],
+    "solo_comfort": 7,
+    "solo_tips": [
+      "The dance floor 'circle' is where the action is—standing on the fringe lets you watch before jumping in.",
+      "Complimenting someone’s outfit is the fastest way to make a 'night-only' friend."
+    ],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Moderate Risk",
+      "description": "Large crowds and high-decibel music; standard nightlife precautions apply."
+    },
+    "physical_proximity": "High; vibrant and crowded dance floors.",
+    "recommendations": [
+      "Look for themed nights (e.g., Holi or Diwali) for the best experience",
+      "Stay near the lighting booth for the best view of the dancers"
+    ]
   }
 ]

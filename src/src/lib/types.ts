@@ -90,6 +90,9 @@ export interface BaseVenue {
   name: string;
   slug: string;
   type: 'bar' | 'club' | 'event';
+  is_cultural?: boolean;
+  global_availability?: GlobalAvailability;
+  is_dance?: boolean;
 
   // Analyze Page
   vibe: string[];

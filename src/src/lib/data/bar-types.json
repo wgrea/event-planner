@@ -4,6 +4,7 @@
     "name": "Dive Bar",
     "slug": "dive-bar",
     "type": "bar",
+    "global_availability": "widespread",
     "vibe": ["dim lighting", "grungy", "authentic", "no-frills"],
     "interaction_intensity": {
       "level": "low",
@@ -27,6 +28,8 @@
     "name": "Irish Pub",
     "slug": "irish-pub",
     "type": "bar",
+    "global_availability": "regional",
+    "is_cultural": true,
     "vibe": ["warm", "wooden", "welcoming", "cozy"],
     "interaction_intensity": {
       "level": "low",
@@ -50,6 +53,7 @@
     "name": "Sports Bar",
     "slug": "sports-bar",
     "type": "bar",
+    "global_availability": "widespread",
     "vibe": ["loud", "competitive", "energetic", "casual"],
     "interaction_intensity": {
       "level": "moderate",
@@ -67,5 +71,127 @@
     },
     "physical_proximity": "Close quarters during big plays; otherwise standard table spacing.",
     "recommendations": ["Arrive 30 minutes before kickoff to snag a bar seat", "Be aware of 'rival' fans if the atmosphere gets heated."]
+  },
+  {
+    "id": "hifi-listening-bar",
+    "name": "Hi-Fi Listening Bar",
+    "slug": "hifi-listening-bar",
+    "type": "bar",
+    "global_availability": "rare",
+    "vibe": ["mid-century modern", "focused", "refined", "acoustic-treated"],
+    "interaction_intensity": {
+      "level": "low",
+      "label": "Very Low Pressure",
+      "description": "The music is the primary guest. Talking over the records is often discouraged, making solo presence the norm."
+    },
+    "social_dynamics": "Individual appreciation of sound; hushed tones; respect for the vinyl curator.",
+    "typical_drinks": ["Japanese Whisky", "Natural Wine", "Classic Cocktails"],
+    "solo_comfort": 10,
+    "solo_tips": ["Bring a book or journal; it fits the 'contemplative' aesthetic perfectly.", "Seats facing the speakers offer the best audio immersion."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Generally controlled environments with attentive staff and predictable crowd behavior."
+    },
+    "physical_proximity": "Controlled seating; minimal incidental contact.",
+    "recommendations": ["Avoid using flash photography", "Check the 'listening rules' if posted at the entrance"]
+  },
+  {
+    "id": "brewery-tour-wine-tasting",
+    "name": "Wine Tasting / Brewery Tour",
+    "slug": "wine-tasting-brewery-tour",
+    "type": "bar",
+    "global_availability": "regional",
+    "vibe": ["educational", "artisanal", "industrial", "scenic"],
+    "interaction_intensity": {
+      "level": "moderate",
+      "label": "Structured Socializing",
+      "description": "Interaction is often guided by a host or sommelier, providing easy 'scripts' for talking to neighbors."
+    },
+    "social_dynamics": "Shared sensory experience; focus on craft and origin; polite and paced conversation.",
+    "typical_drinks": ["Flight of Beer", "Wine Varietals", "Palate Cleansers"],
+    "solo_comfort": 9,
+    "solo_tips": ["Sit at the tasting bar rather than a table; the staff will keep you engaged with 'tasting notes'.", "Ask technical questions about the fermentation—it’s the easiest icebreaker."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Usually high-end or professional environments with a focus on 'sipping' rather than 'chugging'."
+    },
+    "physical_proximity": "Comfortable; usually involves dedicated personal space at a table or bar rail.",
+    "recommendations": ["Eat a full meal beforehand", "Use the 'dump bucket' if you are driving"]
+  },
+  {
+    "id": "indian-telugu-sports-bar",
+    "name": "Indian / Telugu Sports Bar",
+    "slug": "indian-telugu-sports-bar",
+    "type": "bar",
+    "global_availability": "rare",
+    "is_cultural": true,
+    "vibe": ["energetic", "community-focused", "culinary-heavy"],
+    "interaction_intensity": {
+      "level": "moderate-high",
+      "label": "High Communal Energy",
+      "description": "Interaction peaks during live matches (Cricket/IPL). Expect high-volume cheering and table-to-table banter."
+    },
+    "social_dynamics": "Strong emphasis on regional pride and shared sports fandom; feels like a community living room.",
+    "typical_drinks": ["Kingfisher", "Whisky", "Mango Lassi Cocktails"],
+    "solo_comfort": 8,
+    "solo_tips": ["Wear a team jersey (like SRH or India) to immediately gain 'regular' status.", "The bar counter is usually quieter for solo dining while still catching the screen."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Generally very welcoming and family-friendly environments."
+    },
+    "physical_proximity": "High density during major matches; communal seating is common.",
+    "recommendations": ["Check match times before heading out", "Try the small-plate appetizers to share the 'snack culture'"]
+  },
+  {
+    "id": "barcade",
+    "name": "Barcade",
+    "slug": "barcade",
+    "type": "bar",
+    "vibe": ["nostalgic", "kinetic", "neon", "playful"],
+    "interaction_intensity": {
+      "level": "low-moderate",
+      "label": "Activity-Based",
+      "description": "Most people are focused on the screens. Interaction is usually brief, like 'Who has next?' or 'Nice high score!'"
+    },
+    "social_dynamics": "Low-stakes competition; shared nostalgia; easy to start/stop social engagement.",
+    "typical_drinks": ["Craft Cans", "Themed Cocktails", "Pabst Blue Ribbon"],
+    "solo_comfort": 10,
+    "solo_tips": ["Look for single-player cabinet games if you want to be left alone; pinball is the ultimate solo barcade sport.", "Keep a drink holder nearby so you don't leave your glass unattended while playing."],
+    "safety_factors": {
+      "level": "low-moderate",
+      "label": "Low-Moderate Risk",
+      "description": "Generally safe, but high-energy movements (like Skee-Ball or DDR) can lead to accidental bumps."
+    },
+    "physical_proximity": "Moderate; shoulder-to-shoulder at popular cabinets.",
+    "recommendations": ["Carry a few five-dollar bills for the token machine", "Wipe down the controls before/after use"]
+  },
+    {
+    "id": "latin-bar-club",
+    "name": "Latin Bar",
+    "slug": "latin-bar-club",
+    "type": "club",
+    "is_cultural": true,
+    "is_dance": true,
+    "vibe": ["passionate", "warm", "unpretentious", "rhythmic"],
+    "music_identity": ["reggaeton", "merengue", "latin pop", "dembow"],
+    "interaction_intensity": {
+      "level": "high",
+      "label": "Active Engagement",
+      "description": "More 'club' than 'bar'—expect to be asked to dance or to be in a high-density social environment."
+    },
+    "social_dynamics": "Highly social; frequent approaching; energy often stays high until very late.",
+    "typical_drinks": ["Tequila", "Beer with Lime", "Rum"],
+    "solo_comfort": 8,
+    "solo_tips": ["Leaning against the bar with a drink makes you approachable without looking 'lost'.", "Learning basic reggaeton 'step-touches' helps you blend in without needing a partner."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Moderate Risk",
+      "description": "Can get very crowded; watch for floor spills in the high-traffic zones."
+    },
+    "physical_proximity": "High; constant movement and close-quarters dancing.",
+    "recommendations": ["Check if there is a cover charge before you arrive", "Arrive after 11 PM for the peak vibe"]
   }
 ]

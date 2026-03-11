@@ -1,3 +1,4 @@
+// src/routes/events/[slug]/assess/+page.ts
 import type { PageLoad } from './$types';
 import eventTypes from '$lib/data/event-types.json';
 

@@ -1,3 +1,4 @@
+// src/routes/clubs/[slug]/assess/+page.ts
 import type { PageLoad } from './$types';
 import clubTypes from '$lib/data/club-types.json';
 

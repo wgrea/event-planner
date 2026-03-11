@@ -68,7 +68,6 @@
 </script>
 
 <div class="min-h-screen bg-[#FFF7ED]"> 
-
   <div class="sticky top-0 z-30 bg-[#FFF7ED] border-b border-orange-100 px-4 pt-4 pb-3 space-y-3 shadow-sm">
     <div class="max-w-4xl mx-auto flex flex-col gap-2">
       <a href="/" class="text-vibe-blue text-sm">← Back to Home</a>
@@ -77,40 +76,36 @@
         Global Drinks Database
       </h1>
 
+      <p class="text-xs text-vibe-brown/60 italic mt-1">
+        A curated collection of global drink styles.
+      </p>
+
       <button
         class="w-fit px-4 py-1.5 rounded-full bg-white text-vibe-blue border border-blue-200 text-sm font-semibold shadow-sm hover:bg-blue-50"
         on:click={() => filtersOpen = !filtersOpen}
       >
         {filtersOpen ? 'Close Filters ▲' : 'Open Filters ▼'}
       </button>
-    </div>
 
-  <!-- Filter panel (NOW inside sticky container) -->
-  {#if filtersOpen}
-    <div class="max-w-4xl mx-auto pt-2">
-      <FilterBar
-        bind:selectedCategory
-        bind:selectedRegion
-        bind:selectedStrength
-        bind:searchQuery
-        onFilterChange={applyFilters}
-        onClearFilters={clearFilters}
-      />
+      {#if filtersOpen}
+        <div class="pt-2">
+          <FilterBar
+            bind:selectedCategory
+            bind:selectedRegion
+            bind:selectedStrength
+            bind:searchQuery
+            onFilterChange={applyFilters}
+            onClearFilters={clearFilters}
+          />
+        </div>
+      {/if}
     </div>
-  {/if}
+  </div>
 
-<div class="max-w-4xl mx-auto py-6">
+  <main class="max-w-4xl mx-auto py-6">
     <div class="px-6 mb-4 text-vibe-brown/60 text-sm italic font-medium">
       Showing {filteredDrinks.length} of {allDrinks.length} drinks
     </div>
     <DrinkGrid drinks={filteredDrinks} />
+  </main>
 </div>
-</div>
-</div>
-
-<!-- Results count -->
-<div class="max-w-4xl mx-auto px-6 mb-4 text-gray-600 text-sm">
-  Showing {filteredDrinks.length} of {allDrinks.length} drinks
-</div>
-
-<DrinkGrid drinks={filteredDrinks} />

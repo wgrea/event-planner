@@ -1,8 +1,19 @@
 <!-- src/routes/events/+page.svelte -->
 <script lang="ts">
   import eventTypes from '$lib/data/event-types.json';
-  type EventType = { slug: string; name: string; touch?: string; solo?: string; vibe?: string[]; description?: string; };
+  import type { EventType } from '$lib/types';
+
   const events = eventTypes as EventType[];
+
+  let showCultural = false;
+  let showTypicalDrinks = false;
+  let showDance = false;
+
+  $: filteredEvents = events
+    .filter(e => showCultural ? e.is_cultural === true : true)
+    .filter(e => showTypicalDrinks ? e.typical_drinks?.length > 0 : true)
+      .filter(e => showDance ? e.is_dance === true : true)
+    .sort((a, b) => a.name.localeCompare(b.name));
 </script>
 
 <div class="sticky top-0 z-30 bg-yellow-50 px-4 pt-4 pb-3 shadow-sm border-b border-yellow-100">
@@ -11,35 +22,80 @@
     <h1 class="text-2xl font-bold text-vibe-brown">Event Types</h1>
     <p class="text-sm text-vibe-brown/70 italic">Explore social experiences and group dynamics.</p>
   </div>
+
+  <div class="flex gap-2 mt-4">
+    <button
+      class="px-3 py-1 rounded-full text-sm border transition
+            {showCultural ? 'bg-yellow-200 border-yellow-400' : 'bg-white border-yellow-200'}"
+      on:click={() => showCultural = !showCultural}
+    >
+      Cultural
+    </button>
+
+    <button
+      class="px-3 py-1 rounded-full text-sm border transition
+            {showTypicalDrinks ? 'bg-yellow-200 border-yellow-400' : 'bg-white border-yellow-200'}"
+      on:click={() => showTypicalDrinks = !showTypicalDrinks}
+    >
+      Has Typical Drinks
+    </button>
+
+    <button
+      class="px-3 py-1 rounded-full text-sm border transition
+            {showDance ? 'bg-pink-200 border-pink-400' : 'bg-white border-pink-200'}"
+      on:click={() => showDance = !showDance}
+    >
+      Dance
+    </button>
+
+  </div>
 </div>
 
 <div class="min-h-screen bg-yellow-50/50 px-4 py-8">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-    {#each events as ev}
+    {#each filteredEvents as ev}
       <a
         href={`/events/${ev.slug}`}
         class="bg-white border border-yellow-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-all hover:border-yellow-300"
       >
         <h2 class="text-xl font-bold text-vibe-brown">{ev.name}</h2>
 
-        <div class="flex flex-wrap gap-x-4 gap-y-1 mt-2">
-          {#if ev.touch}
-            <p class="text-sm text-vibe-brown/60 font-medium italic">Touch: {ev.touch}</p>
+        <!-- Cultural + Typical Drinks Badges -->
+        <div class="mt-1 flex gap-2">
+          {#if ev.is_cultural}
+            <span class="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
+              Cultural
+            </span>
           {/if}
-          {#if ev.solo}
-            <p class="text-sm text-vibe-brown/60 font-medium">Solo: {ev.solo}</p>
+
+          {#if ev.typical_drinks?.length > 0}
+            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">
+              Has Typical Drinks
+            </span>
           {/if}
+
+          {#if ev.is_dance}
+            <span class="text-xs bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full">
+              Dance
+            </span>
+          {/if}
+
         </div>
 
-        {#if ev.vibe}
-          <div class="flex flex-wrap gap-1 mt-3">
-            {#each ev.vibe as v}
-              <span class="text-xs bg-yellow-50 text-vibe-brown/80 border border-yellow-100 px-2 py-0.5 rounded-full">
-                {v}
-              </span>
-            {/each}
-          </div>
+        {#if ev.global_availability}
+          <span
+            class="text-xs px-2 py-0.5 rounded-full
+            {ev.global_availability === 'widespread' ? 'bg-blue-100 text-blue-700' :
+            ev.global_availability === 'regional' ? 'bg-yellow-100 text-yellow-700' :
+            'bg-gray-100 text-gray-700'}"
+          >
+            {ev.global_availability === 'widespread' ? 'Common' :
+            ev.global_availability === 'regional' ? 'Regional' :
+            'Rare'}
+          </span>
         {/if}
+
+        <!-- Social Dynamics Preview has been removed since that is already in the analyze page -->
       </a>
     {/each}
   </div>

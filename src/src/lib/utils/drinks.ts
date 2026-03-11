@@ -5,6 +5,7 @@ import spiritsData from '$lib/data/drinks/spirits.json';
 import cocktailsData from '$lib/data/drinks/cocktails.json';
 import fermentedData from '$lib/data/drinks/fermented-traditional.json';
 import nonAlcoholicData from '$lib/data/drinks/non-alcoholic.json';
+import globalData from '$lib/data/drinks/global.json'; // Add this
 
 export const allDrinks = [
   ...beerData,
@@ -12,7 +13,8 @@ export const allDrinks = [
   ...spiritsData,
   ...cocktailsData,
   ...fermentedData,
-  ...nonAlcoholicData
+  ...nonAlcoholicData,
+  ...globalData // Add this
 ];
 
 export function findRelatedDrinks(categories: string[]) {
