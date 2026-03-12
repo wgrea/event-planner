@@ -2,11 +2,17 @@
 <script lang="ts">
   import SafetyCard from '$lib/components/safety/Card.svelte';
   export let drink: any;
+
+  // Helper to handle both string origins and object origins
+  $: originDisplay = typeof drink.origin === 'object' ? drink.origin.region : drink.origin;
+  
+  // Helper to handle both singular and plural key names for settings
+  $: settings = drink.typical_settings || drink.typical_setting || [];
 </script>
 
 <SafetyCard title="Origin">
-  {#if drink.origin || drink.regional_identity}
-    <p><span class="font-medium">Region:</span> {drink.origin}</p>
+  {#if originDisplay || drink.regional_identity}
+    <p><span class="font-medium">Region:</span> {originDisplay}</p>
     {#if drink.regional_identity}
       <p><span class="font-medium">Identity:</span> {drink.regional_identity}</p>
     {/if}
@@ -19,16 +25,18 @@
   <SafetyCard title="Flavor Profile">
     <div class="flex flex-wrap gap-2">
       {#each drink.flavor_profile as f}
-        <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm">{f}</span>
+        <span class="bg-[#fcdab7]/40 border border-orange-200 text-vibe-brown px-3 py-1 rounded-full text-sm font-medium">
+          {f}
+        </span>
       {/each}
     </div>
   </SafetyCard>
 {/if}
 
-{#if drink.typical_setting?.length}
+{#if settings.length}
   <SafetyCard title="Typical Settings">
     <ul class="list-disc ml-5 space-y-1">
-      {#each drink.typical_setting as s}
+      {#each settings as s}
         <li>{s}</li>
       {/each}
     </ul>

@@ -1,0 +1,130 @@
+[
+  {
+    "id": "heineken",
+    "name": "Heineken",
+    "slug": "heineken",
+    "category": "Beer",
+    "subcategory": "European Pale Lager",
+    "origin": { "region": "Netherlands" },
+    "flavor_profile": ["crisp", "clean", "bitter-finish"],
+    "typical_settings": ["international-bars", "airports", "festivals"],
+    "cultural_notes": "A standard 'green bottle' lager recognized globally. Known for consistent quality control across borders.",
+    "overall_risk": "low",
+    "alcohol_percentage": 5.0,
+    "key_safety_notes": [
+      "Predictable and standard impact",
+      "Highly consistent production standards",
+      "Available in non-alcoholic (Heineken 0.0) in many regions"
+    ],
+    "recommended_actions": ["Standard hydration applies"],
+    "typical_consumption_patterns": ["social-drinking", "travel-transit"]
+  },
+  {
+    "id": "bud-light",
+    "name": "Bud Light",
+    "slug": "bud-light",
+    "category": "Beer",
+    "subcategory": "Light Lager",
+    "origin": { "region": "USA" },
+    "flavor_profile": ["very-light", "watery", "low-bitterness"],
+    "typical_settings": ["sports-bars", "house-parties", "rural-pubs"],
+    "cultural_notes": "One of the best-selling light beers globally. Uses rice as an adjunct to keep the body light and refreshing.",
+    "overall_risk": "low",
+    "alcohol_percentage": 4.2,
+    "key_safety_notes": [
+      "Lower alcohol content per volume",
+      "Fast consumption due to light body",
+      "High water content contributes to slower intoxication vs heavy ales"
+    ],
+    "recommended_actions": ["Monitor pace of consumption due to drinkability"],
+    "typical_consumption_patterns": ["high-volume-socials", "sports-viewing"]
+  },
+  {
+    "id": "budweiser",
+    "name": "Budweiser",
+    "slug": "budweiser",
+    "category": "Beer",
+    "subcategory": "American Lager",
+    "origin": { "region": "USA" },
+    "flavor_profile": ["crisp", "clean", "malty-sweet"],
+    "typical_settings": ["sports-events", "casual-dining", "mass-market"],
+    "cultural_notes": "Known as the 'King of Beers,' it uses rice as an adjunct for a cleaner, crisper finish that appeals to a massive global audience.",
+    "overall_risk": "low",
+    "alcohol_percentage": 5.0,
+    "key_safety_notes": [
+      "Standard mass-market ABV",
+      "Highly carbonated",
+      "Predictable and standard impact"
+    ],
+    "recommended_actions": [
+      "Standard hydration applies",
+      "Eat food while drinking"
+    ],
+    "typical_consumption_patterns": ["high-volume-socials", "sports-viewing"]
+  },
+  {
+    "id": "corona-extra",
+    "name": "Corona Extra",
+    "slug": "corona-extra",
+    "category": "Beer",
+    "subcategory": "Mexican Lager",
+    "origin": { "region": "Mexico" },
+    "flavor_profile": ["light", "refreshing", "honey-notes"],
+    "typical_settings": ["beach-bars", "summer-events", "outdoor-dining"],
+    "cultural_notes": "Traditionally served with a lime wedge. The clear bottle is iconic but makes the beer susceptible to 'skunking' if left in direct sunlight.",
+    "overall_risk": "low",
+    "alcohol_percentage": 4.5,
+    "key_safety_notes": [
+      "Slightly lower ABV than standard European lagers",
+      "Transparent bottle leads to rapid flavor degradation in sun"
+    ],
+    "recommended_actions": [
+      "Keep out of direct sunlight to maintain flavor",
+      "Standard hydration applies"
+    ],
+    "typical_consumption_patterns": ["relaxed-social", "outdoor-events"]
+  },
+  {
+    "id": "miller-lite",
+    "name": "Miller Lite",
+    "slug": "miller-lite",
+    "category": "Beer",
+    "subcategory": "Light Pilsner",
+    "origin": { "region": "USA" },
+    "flavor_profile": ["crisp", "light-malt", "clean"],
+    "typical_settings": ["dive-bars", "sports-events", "backyard-bbqs"],
+    "cultural_notes": "Marketed as the original light beer (1975). It maintains a slightly more floral pilsner profile compared to other light lagers.",
+    "overall_risk": "low",
+    "alcohol_percentage": 4.2,
+    "key_safety_notes": [
+      "Standard light beer ABV",
+      "High drinkability may lead to a faster pace of consumption"
+    ],
+    "recommended_actions": [
+      "Monitor consumption pace due to light body",
+      "Standard hydration applies"
+    ],
+    "typical_consumption_patterns": ["casual-socializing", "prolonged-events"]
+  },
+  {
+    "id": "stella-artois",
+    "name": "Stella Artois",
+    "category": "Beer",
+    "subcategory": "European Pale Lager",
+    "origin": { "region": "Belgium" },
+    "flavor_profile": ["floral", "crisp", "bitter-finish"],
+    "typical_settings": ["upscale-bars", "bistros", "holiday-events"],
+    "cultural_notes": "Originally brewed as a special Christmas beer in Leuven, named 'Stella' (Latin for Star) after the Christmas Star.",
+    "overall_risk": "low",
+    "alcohol_percentage": 5.0,
+    "key_safety_notes": [
+      "Consistent Belgian production standards",
+      "Higher carbonation level than some domestic lagers"
+    ],
+    "recommended_actions": [
+      "Standard hydration applies",
+      "Best enjoyed chilled"
+    ],
+    "typical_consumption_patterns": ["social-dining", "evening-drinks"]
+  }
+]

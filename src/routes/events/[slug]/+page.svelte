@@ -20,7 +20,9 @@
       <Toggle title="Typical Drinks" theme="yellow">
         <ul class="list-disc ml-5 space-y-1 text-vibe-brown">
           {#each relatedDrinks as drink}
-            <li class="hover:text-vibe-blue transition-colors cursor-default">{drink.name}</li>
+            <li class="hover:text-yellow-700 transition-colors cursor-default font-medium">
+              {drink.name}
+            </li>
           {/each}
         </ul>
       </Toggle>

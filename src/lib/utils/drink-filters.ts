@@ -15,10 +15,14 @@ export function getCategoryColor(category: string): string {
 }
 
 // Normalize origin → region
-export function normalizeOriginToRegion(origin?: string): string {
-  const originLower = origin?.toLowerCase() ?? '';
-
-    // Caribbean
+export function normalizeOriginToRegion(origin?: any): string {
+  // 1. Extract the string if it's an object, otherwise use as-is
+  const originString = typeof origin === 'object' ? origin.region : origin;
+  
+  // 2. Now perform the lowercase check on the string
+  const originLower = originString?.toLowerCase() ?? '';
+  
+  // Caribbean 
   if (
     originLower.includes('caribbean') ||
     originLower.includes('cuba') ||

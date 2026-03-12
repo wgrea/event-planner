@@ -72,66 +72,56 @@ export type Drink = {
 };
 
 // ============= VENUE TYPES =============
-export interface BarType {
-  type: 'bar';
+
+export interface InteractionIntensity {
+  level: PressureLevel;      // "low" | "moderate" | "high" | etc.
+  label: string;             // UI-friendly label
+  description: string;       // prose
+}
+
+export interface SafetyFactors {
+  level: 'low' | 'moderate' | 'moderate-high' | 'high';
+  label: string;             // "low intensity"
+  description: string;       // prose
+}
+
+export interface BaseVenue {
   id: string;
   name: string;
   slug: string;
-  pressure_level: PressureLevel;
+  type: 'bar' | 'club' | 'event';
+  is_cultural?: boolean;
+  global_availability?: GlobalAvailability;
+  is_dance?: boolean;
+
+  // Analyze Page
   vibe: string[];
   social_dynamics: string;
   typical_drinks: string[];
-  cultural_notes?: string;
 
-  //For Assess Page
-  overall_risk?: 'low' | 'moderate' | 'moderate-high' | 'high';
-  safety_notes?: string[];
-  recommendations?: string[];
-  sensory_intensity?: 'low' | 'moderate' | 'high';
-  peak_hours?: string;
-  solo_comfort?: number; // 1–10 scale, optional
+  // New structured fields
+  interaction_intensity: InteractionIntensity;
+  safety_factors: SafetyFactors;
+
+  // Solo
+  solo_comfort: number;
+  solo_tips: string[];
+
+  // Physical Proximity
+  physical_proximity: string;
+
+  // Recommendations
+  recommendations: string[];
+
+  // Optional
+  music_identity?: string[];
+  plan_night_around?: boolean;
+  cultural_notes?: string;
 }
 
-export interface ClubType {
-  type: 'club';
-  id: string;
-  name: string;
-  slug: string;
-  pressure_level: PressureLevel;
-  vibe: string[];
-  music_identity: string[];
-  social_expectations: string;
-  typical_drinks: string[];
-  cultural_notes?: string;
-
-  //For Assess Page
-  overall_risk?: 'low' | 'moderate' | 'moderate-high' | 'high';
-  safety_notes?: string[];
-  recommendations?: string[];
-  sensory_intensity?: 'low' | 'moderate' | 'high';
-  peak_hours?: string;
-  solo_comfort?: number; // 1–10 scale, optional
-}
-
-export interface EventType {
-  type: 'event';
-  id: string;
-  name: string;
-  slug: string;
-  touch_level: string;
-  social_dynamics: string;
-  plan_night_around: boolean;
-  typical_drinks: string[];
-  cultural_notes?: string;
-
-  //For Assess Page
-  overall_risk?: 'low' | 'moderate' | 'moderate-high' | 'high';
-  safety_notes?: string[];
-  recommendations?: string[];
-  sensory_intensity?: 'low' | 'moderate' | 'high';
-  peak_hours?: string;
-  solo_comfort?: number; // 1–10 scale, optional
-}
+export type BarType = BaseVenue & { type: 'bar' };
+export type ClubType = BaseVenue & { type: 'club'; social_expectations: string };
+export type EventType = BaseVenue & { type: 'event'; plan_night_around: boolean };
 
 export type Venue = BarType | ClubType | EventType;
 
@@ -148,20 +138,28 @@ export function isEvent(venue: Venue): venue is EventType {
   return venue.type === 'event';
 }
 
-// Helper function to get social pressure level (normalized across venue types)
-export function getVenuePressureLevel(venue: Venue): PressureLevel | undefined {
-  if (isBar(venue) || isClub(venue)) {
-    return venue.pressure_level;
-  }
-  return undefined;
+// ============= HELPER FUNCTIONS =============
+
+// Standardized Vibe Grabber (Fixes the "No data" UI issue)
+export function getVenueVibe(venue: Venue): string[] {
+  const baseVibes = venue.vibe || [];
+  const musicTags = isClub(venue) ? (venue.music_identity || []) : [];
+  
+  const tags = [...baseVibes, ...musicTags];
+  
+  return tags.length > 0 ? tags : ["Ambient"];
 }
 
-// Helper to get the "vibe" equivalent for events
-export function getVenueVibe(venue: Venue): string[] {
-  if (isBar(venue) || isClub(venue)) {
-    return venue.vibe;
+export function getVenuePressureLevel(venue: Venue): PressureLevel {
+  return venue.interaction_intensity?.level || 'low-moderate';
+}
+
+// Helper to determine dynamics based on type
+export function getVenueDynamics(venue: Venue): string {
+  if (isClub(venue)) {
+    return venue.social_expectations || venue.social_dynamics;
   }
-  return [venue.touch_level, ...venue.social_dynamics.split(',').map(s => s.trim())];
+  return venue.social_dynamics || "Individual-focused environment.";
 }
 
 // ============= COUNTRY TYPES =============

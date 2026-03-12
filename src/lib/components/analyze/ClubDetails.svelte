@@ -8,7 +8,9 @@
   {#if club.vibe?.length}
     <div class="flex flex-wrap gap-2">
       {#each club.vibe as v}
-        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">{v}</span>
+        <span class="bg-purple-100 border border-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+          {v}
+        </span>
       {/each}
     </div>
   {:else}
@@ -20,7 +22,9 @@
   {#if club.music_identity?.length}
     <div class="flex flex-wrap gap-2">
       {#each club.music_identity as m}
-        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">{m}</span>
+        <span class="bg-indigo-100 border border-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+          {m}
+        </span>
       {/each}
     </div>
   {:else}
@@ -28,8 +32,11 @@
   {/if}
 </SafetyCard>
 
-<SafetyCard title="Social Pressure">
-  <p class="capitalize">{club.pressure_level.replace('-', ' ')}</p>
+<SafetyCard title="Interaction Intensity">
+  <p class="capitalize">{club.interaction_intensity.label}</p>
+  <p class="text-xs text-vibe-brown italic mt-1">
+    {club.interaction_intensity.description}
+  </p>
 </SafetyCard>
 
 <SafetyCard title="Social Expectations">

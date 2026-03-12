@@ -20,5 +20,7 @@
     <link rel="icon" href={favicon} />
 </svelte:head>
 
-<slot />
+<main class="min-h-screen bg-[#fcdab7] p-4 md:p-8">
+    <slot />
+</main>
 

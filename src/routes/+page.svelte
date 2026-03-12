@@ -19,19 +19,17 @@
 
   type CountryConsumption = { code: string; liters: number };
 
-  // Makes sense to have data here since it's more global. 
-  // Maybe I should add this to the drinks database and not have this separate since I think users may expect what is drank everywhere to be in the database page
   const drankEverywhere = [
-    { name: 'Heineken', country: 'Netherlands', category: 'Beer' },
-    { name: 'Budweiser', country: 'USA', category: 'Beer' },
-    { name: 'Bud Light', country: 'USA', category: 'Beer' },
-    { name: 'Corona Extra', country: 'Mexico', category: 'Beer' },
-    { name: 'Miller Lite', country: 'USA', category: 'Beer' },
-    { name: 'Stella Artois', country: 'Belgium', category: 'Beer' }
+    { name: 'Heineken', country: 'Netherlands', category: 'Beer', slug: 'heineken' },
+    { name: 'Budweiser', country: 'USA', category: 'Beer', slug: 'budweiser' },
+    { name: 'Bud Light', country: 'USA', category: 'Beer', slug: 'bud-light' },
+    { name: 'Corona Extra', country: 'Mexico', category: 'Beer', slug: 'corona-extra' },
+    { name: 'Miller Lite', country: 'USA', category: 'Beer', slug: 'miller-lite' },
+    { name: 'Stella Artois', country: 'Belgium', category: 'Beer', slug: 'stella-artois' }
   ];
 </script>
 
-<div class="p-6">
+<div class="min-h-screen bg-[#fcdab7] p-6">
   <div class="max-w-xl mx-auto bg-white rounded-xl shadow-md p-6 space-y-10">
 
     <Header />

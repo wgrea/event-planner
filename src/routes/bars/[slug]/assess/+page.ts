@@ -1,3 +1,4 @@
+// src/routes/bars/[slug]/assess/+page.ts
 import type { PageLoad } from './$types';
 import barTypes from '$lib/data/bar-types.json';
 

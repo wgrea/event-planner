@@ -15,10 +15,10 @@
     <div class="flex flex-wrap gap-2 mb-4">
       {#each CATEGORIES as cat}
         <button
-          class={`px-4 py-1.5 rounded-full border transition-all text-sm font-medium
+        class={`px-4 py-1.5 rounded-full border transition-all text-sm font-bold
             ${selectedCategory === cat
-              ? 'bg-[#FFEDD5] text-[#7A4A00] border-[#FED7AA] shadow-sm' 
-              : 'bg-white border-gray-200 text-[#7A4A00]/70 hover:border-[#FED7AA] hover:bg-orange-50/30'}
+              ? 'bg-[#ffbd7a] text-vibe-brown border-orange-400 shadow-inner' 
+              : 'bg-white/80 border-orange-100 text-vibe-brown/70 hover:bg-white hover:border-orange-300'}
           `}
           on:click={() => { 
             selectedCategory = selectedCategory === cat ? null : cat; 

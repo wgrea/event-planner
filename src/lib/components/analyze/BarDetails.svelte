@@ -4,11 +4,14 @@
   export let bar: any;
 </script>
 
+
 <SafetyCard title="Atmosphere & Vibe">
   {#if bar.vibe?.length}
     <div class="flex flex-wrap gap-2">
       {#each bar.vibe as v}
-        <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">{v}</span>
+        <span class="bg-green-100 border border-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+          {v}
+        </span>
       {/each}
     </div>
   {:else}
@@ -16,8 +19,11 @@
   {/if}
 </SafetyCard>
 
-<SafetyCard title="Social Pressure">
-  <p class="capitalize">{bar.pressure_level.replace('-', ' ')}</p>
+<SafetyCard title="Interaction Intensity">
+  <p class="capitalize">{bar.interaction_intensity.label}</p>
+  <p class="text-xs text-vibe-brown italic mt-1">
+    {bar.interaction_intensity.description}
+  </p>
 </SafetyCard>
 
 <SafetyCard title="Social Dynamics">

@@ -12,7 +12,7 @@
 </script>
 
 <AssessLayout
-  theme="blue"
+  theme="orange"
   title={`Safety Assessment — ${drink.name}`}
   backHref={`/drinks/${drink.id}`}
 >

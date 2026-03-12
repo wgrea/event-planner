@@ -1,5 +1,4 @@
 <!-- src/routes/service-design/blueprint/+page.svelte -->
-<!-- src/routes/service-design/blueprint/+page.svelte -->
 <script>
   import { goto } from '$app/navigation';
 </script>

@@ -4,22 +4,20 @@
   export let event: any;
 </script>
 
-<SafetyCard title="Touch Level">
-  <p class="capitalize text-vibe-brown font-medium">{event.touch_level}</p>
-</SafetyCard>
-
 <SafetyCard title="Social Dynamics">
   <p class="text-vibe-brown leading-relaxed">{event.social_dynamics}</p>
-  {#if event.solo === 'High'}
-    <div class="mt-3 p-2 bg-yellow-50 border border-yellow-100 rounded-lg text-xs text-vibe-brown font-semibold flex items-center gap-2">
-      <span>✨</span> Highly Solo-Friendly Experience
-    </div>
-  {/if}
+</SafetyCard>
+
+<SafetyCard title="Interaction Intensity">
+  <p class="capitalize">{event.interaction_intensity.label}</p>
+  <p class="text-xs text-vibe-brown italic mt-1">
+    {event.interaction_intensity.description}
+  </p>
 </SafetyCard>
 
 <SafetyCard title="Commitment Level">
-  <p class="text-vibe-brown">
-    {event.plan_night_around ? 'Plan your night around this' : 'Drop-in friendly'}
+  <p class="text-vibe-brown font-medium px-3 py-2 bg-yellow-50 border border-yellow-200 rounded-lg inline-block">
+    {event.plan_night_around ? '📍 Plan your night around this' : '👋 Drop-in friendly'}
   </p>
 </SafetyCard>
 
