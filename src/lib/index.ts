@@ -2,9 +2,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import type {
-  BarType, ClubType, EventType, Drink, DrinkCategory, Country,
-  DrinkToBarMapping, DrinkToClubMapping, DrinkToEventMapping,
-  CountryConsumption, CountryDetails
+  BarType, ClubType, EventType, Drink, Country,
+  DrinkToBarMapping, DrinkToClubMapping, DrinkToEventMapping, CountryDetails
 } from './types';
 
 export * from './types';
@@ -108,7 +107,6 @@ export class JSONDatabase {
   async getDrinksByRegion(region: string): Promise<Drink[]> {
     const allDrinks = await this.getAllDrinks();
     return allDrinks.filter(drink => 
-      drink.regional_identity?.toLowerCase().includes(region.toLowerCase()) ||
       drink.origin?.toLowerCase().includes(region.toLowerCase())
     );
   }
@@ -163,10 +161,6 @@ export class JSONDatabase {
     }
 
     // Drink Categories
-    async getDrinkCategories(): Promise<DrinkCategory[]> {
-      const filePath = path.join(this.dataDir, 'drink-categories.json');
-      return this.readJSONFile<DrinkCategory[]>(filePath);
-    }
 
     // Country methods
     async getCountries(): Promise<Country[]> {
@@ -180,10 +174,6 @@ export class JSONDatabase {
     }
 
     // Mock data methods
-    async getMockCountryConsumption(): Promise<CountryConsumption[]> {
-      const filePath = path.join(this.dataDir, 'mock-country-consumption.json');
-      return this.readJSONFile<CountryConsumption[]>(filePath);
-    }
 
     async getMockCountryDetails(): Promise<CountryDetails[]> {
       const filePath = path.join(this.dataDir, 'mock-country-details.json');

@@ -14,20 +14,5 @@
 
 <AnalyzeLayout theme="yellow" title={event.name} backHref="/events">
   <EventAnalyzeDetails {event} />
-
-  {#if relatedDrinks.length}
-    <div class="space-y-2 mt-6">
-      <Toggle title="Typical Drinks" theme="yellow">
-        <ul class="list-disc ml-5 space-y-1 text-vibe-brown">
-          {#each relatedDrinks as drink}
-            <li class="hover:text-yellow-700 transition-colors cursor-default font-medium">
-              {drink.name}
-            </li>
-          {/each}
-        </ul>
-      </Toggle>
-    </div>
-  {/if}
-
   <AnalyzeCTA href={`/events/${event.slug}/assess`} />
 </AnalyzeLayout>

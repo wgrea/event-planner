@@ -34,6 +34,7 @@
     "name": "Structured Dance Lessons",
     "slug": "structured-dance-lessons",
     "type": "event",
+    "global_availability": "widespread",
     "is_dance": true,
     "plan_night_around": true,
     "interaction_intensity": {
@@ -88,6 +89,7 @@
     "name": "Bachata Social",
     "slug": "bachata-social",
     "type": "event",
+    "global_availability": "regional",
     "is_cultural": true,
     "is_dance": true,
     "plan_night_around": true,
@@ -139,6 +141,7 @@
     "name": "Salsa Social Dance",
     "slug": "salsa-social-dance",
     "type": "event",
+    "global_availability": "widespread",
     "is_cultural": true,
     "is_dance": true,
     "plan_night_around": true,
@@ -164,6 +167,7 @@
     "name": "Swing Dance",
     "slug": "swing-dance",
     "type": "event",
+    "global_availability": "regional",
     "is_dance": true,
     "plan_night_around": true,
     "interaction_intensity": {
@@ -188,6 +192,7 @@
     "name": "Concert or Music Festival",
     "slug": "concert-music-festival",
     "type": "event",
+    "global_availability": "widespread",
     "plan_night_around": true,
     "interaction_intensity": {
       "level": "low-moderate",
@@ -261,6 +266,7 @@
     "name": "Potluck / Private Dinner Party",
     "slug": "potluck-private-dinner",
     "type": "event",
+    "global_availability": "widespread",
     "plan_night_around": true,
     "interaction_intensity": {
       "level": "high",
@@ -284,6 +290,7 @@
     "name": "Cultural Events & Festivals",
     "slug": "cultural-festival",
     "type": "event",
+    "global_availability": "widespread",
     "is_cultural": true,
     "plan_night_around": false,
     "interaction_intensity": {
@@ -379,6 +386,7 @@
     "name": "Open Mic Night",
     "slug": "open-mic-night",
     "type": "event",
+    "global_availability": "widespread",
     "plan_night_around": true,
     "interaction_intensity": {
       "level": "moderate",

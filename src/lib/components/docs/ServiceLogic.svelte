@@ -2,7 +2,7 @@
 <section class="space-y-8">
   <header>
     <h2 class="text-xl font-bold text-[#5B3E31]">Sequential Trust-Building</h2>
-    <p class="text-sm opacity-70">How retail safety workflows define our digital UX.</p>
+    <p class="text-sm opacity-70">How retail safety workflows define my digital UX.</p>
   </header>
 
   <div class="grid grid-cols-1 gap-6">

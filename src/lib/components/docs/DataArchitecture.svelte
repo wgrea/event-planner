@@ -11,7 +11,7 @@
         Drink_Category ↔ Bar_Type ↔ Pressure_Level
       </code>
       <p class="text-xs mt-2 opacity-80">
-        Unlike a flat directory, our bridge tables use <strong>Fit Scores (1–5)</strong> to determine if a drink belongs in a specific atmosphere.
+        Unlike a flat directory, my bridge tables use <strong>Fit Scores (1–5)</strong> to determine if a drink belongs in a specific atmosphere.
       </p>
     </div>
 

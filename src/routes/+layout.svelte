@@ -1,26 +1,24 @@
 <!-- src/routes/+layout.svelte -->
 <script lang="ts">
     import "../app.css";
-    import favicon from '$lib/assets/favicon.svg';
     import { page } from '$app/stores';
 
     $: currentPath = $page.url.pathname;
 
     function getNextStep(path: string) {
-    if (path.startsWith('/safety/inspect')) return '/safety/analyze';
-    if (path.startsWith('/safety/analyze')) return '/safety/assess';
-    if (path.startsWith('/safety/assess')) return '/session/reset';
-    return null;
+        if (path.startsWith('/safety/inspect')) return '/safety/analyze';
+        if (path.startsWith('/safety/analyze')) return '/safety/assess';
+        if (path.startsWith('/safety/assess')) return '/session/reset';
+        return null;
     }
 
     $: nextStep = getNextStep(currentPath);
 </script>
 
 <svelte:head>
-    <link rel="icon" href={favicon} />
+    <link rel="icon" href="/favicon.png" />
 </svelte:head>
 
 <main class="min-h-screen bg-[#fcdab7] p-4 md:p-8">
     <slot />
 </main>
-

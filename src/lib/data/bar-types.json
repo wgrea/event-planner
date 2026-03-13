@@ -150,6 +150,7 @@
     "name": "Barcade",
     "slug": "barcade",
     "type": "bar",
+    "global_availability": "widespread",
     "vibe": ["nostalgic", "kinetic", "neon", "playful"],
     "interaction_intensity": {
       "level": "low-moderate",
@@ -173,6 +174,7 @@
     "name": "Latin Bar",
     "slug": "latin-bar-club",
     "type": "club",
+    "global_availability": "widespread",
     "is_cultural": true,
     "is_dance": true,
     "vibe": ["passionate", "warm", "unpretentious", "rhythmic"],

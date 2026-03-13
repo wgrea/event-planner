@@ -1,143 +1,109 @@
 <!-- src/routes/service-design/blueprint/+page.svelte -->
 <script>
   import { goto } from '$app/navigation';
+  
+  // Define FAQs directly in the script
+  const faqs = [
+    {
+      group: "Product & Purpose",
+      q: "What problem does this prototype solve?",
+      a: "It helps users understand cultural drinking environments, safety context, and vibe expectations — something traditional travel apps don’t address."
+    },
+    {
+      group: "Product & Purpose",
+      q: "Who is this designed for?",
+      a: "Travelers, expats, solo explorers, and anyone who wants cultural context and safety clarity before choosing a nightlife environment."
+    },
+    {
+      group: "Product Strategy",
+      q: "How is this different from a travel app?",
+      a: "Travel apps focus on 'Existence' (Does this bar exist?). We focus on 'Resonance' (Will I feel safe and comfortable in this environment?)."
+    },
+    {
+      group: "Technical Design",
+      q: "Why use JSON instead of a live DB?",
+      a: "For the prototype phase, JSON ensures high-speed exploration and 'Contextual Certainty'. It allows for hard-coded cultural nuances that AI often misses."
+    },
+    {
+      group: "AI & ML",
+      q: "Is this an AI recommender system?",
+      a: "No — the value comes from human-curated cultural nuance and safety communication. AI could support future features, but it is not the focus of this prototype."
+    },
+    {
+      group: "UX & Accessibility",
+      q: "Why the light UI for a nightlife app?",
+      a: "To prioritize readability and cultural warmth. We avoid the 'Dark Mode' cliché to frame the app as a Cultural Atlas rather than a club flyer."
+    }
+  ];
 </script>
 
-<div class="min-h-screen bg-softBlue/30 p-6">
-  <div class="min-h-screen bg-blue-50/50 p-6">
-    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-sm border border-blue-100 p-8 space-y-10">
+<section class="space-y-8">
+  <header>
+    <h2 class="text-xl font-bold text-[#5B3E31]">High-Order UX Application</h2>
+    <p class="text-sm opacity-70">Moving beyond "AI-generated UI" to intentional interaction design.</p>
+  </header>
 
-      <header class="flex items-center justify-between border-b border-blue-50 pb-4">
-        <h1 class="text-2xl font-bold text-vibe-brown">Service Design Blueprint</h1>
-        <a href="/" class="text-vibe-blue hover:scale-110 transition-transform text-2xl">✕</a>
-      </header>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-2 p-4 bg-gray-50/50 rounded-xl text-xs">
+    <span class="font-medium">understanding people</span>
+    <span class="font-medium">designing flows</span>
+    <span class="font-medium">shaping meaning</span>
+    <span class="font-medium">structuring information</span>
+    <span class="font-medium">reducing friction</span>
+    <span class="font-medium">building trust</span>
+    <span class="font-medium">creating clarity</span>
+    <span class="font-medium">mapping journeys</span>
+    <span class="font-medium">designing systems</span>
+  </div>
 
-      <section>
-        <h2 class="text-xl font-bold text-vibe-brown mb-4 flex items-center gap-2">
-          <span class="w-2 h-6 bg-orange-400 rounded-full"></span>
-          Sequential Trust-Building Flow
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-          <div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100/50">
-            <h3 class="font-bold text-vibe-blue mb-2">1. Awareness</h3>
-            <ul class="space-y-1 text-vibe-brown/80">
-              <li>• Explore map</li>
-              <li>• See patterns</li>
-              <li>• Notice trends</li>
-            </ul>
-          </div>
-          
-          <div class="bg-softBlue/20 p-3 rounded-lg">
-            <h3 class="font-semibold">Evaluation</h3>
-            <ul class="list-disc ml-4">
-              <li>Check details</li>
-              <li>Compare data</li>
-              <li>Review risks</li>
-            </ul>
-          </div>
-
-          <div class="bg-softBlue/20 p-3 rounded-lg">
-            <h3 class="font-semibold">Action</h3>
-            <ul class="list-disc ml-4">
-              <li>Review guidance</li>
-              <li>Make decision</li>
-              <li>Take action</li>
-            </ul>
-          </div>
+  <div class="space-y-6">
+    <div class="p-5 rounded-2xl border border-orange-100 bg-orange-50/30">
+      <h3 class="text-sm font-bold text-[#2563EB] mb-2 uppercase tracking-wide">Trust & Agency</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+        <div>
+          <p class="font-bold">Cognitive Alignment</p>
+          <p class="opacity-70 text-xs">The UI matches the user’s mental model of 'Atmosphere' rather than just 'Location'.</p>
         </div>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-xl font-bold text-vibe-brown">Retail Workflow Mapping</h2>
-        <ul class="grid grid-cols-2 gap-3 text-sm">
-          <li class="bg-orange-50/50 p-3 rounded-lg border border-orange-100 text-vibe-brown">
-            <span class="font-bold">Inspect</span> → Awareness
-          </li>
-          <li class="bg-orange-50/50 p-3 rounded-lg border border-orange-100 text-vibe-brown">
-            <span class="font-bold">Wrap & Seal</span> → Evaluation
-          </li>
-        </ul>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Frontstage (Visible)</h2>
-        <ul class="list-disc ml-4 text-sm">
-          <li>Explore — World map, heat coding, visual patterns</li>
-          <li>Check — Charts, time data, country details</li>
-          <li>Decide — Risk cards, WHO guidelines, safety info</li>
-        </ul>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Backstage (System)</h2>
-        <ul class="list-disc ml-4 text-sm">
-          <li>Data Load — Fetch consumption data, apply heat mapping</li>
-          <li>Analysis — Calculate peaks, aggregate time series</li>
-          <li>Risk Scoring — Apply WHO thresholds, generate alerts</li>
-        </ul>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Trust Building (Inspired by Retail Safety)</h2>
-        <ul class="list-disc ml-4 text-sm">
-          <li>Transparency — Clear data sources, visible calculations</li>
-          <li>Verification — WHO certified, peer-reviewed guidelines</li>
-          <li>Consistency — Predictable flows, reliable patterns</li>
-          <li>Safety First — Calm badges, non-alarming presentation</li>
-        </ul>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Retail Workflow Mapping</h2>
-        <ul class="list-disc ml-4 text-sm">
-          <li>Inspect → Awareness</li>
-          <li>Wrap & Seal → Evaluation</li>
-          <li>Label → Action</li>
-          <li>Clean — System Reset returns to fresh start</li>
-        </ul>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Anticipated Reviewer Questions</h2>
-        <p class="text-gray-600 text-sm">Cross-disciplinary questions I expect when presenting this UX-first prototype.</p>
-
-        <div class="space-y-3 text-sm">
-          <div>
-            <h3 class="font-semibold text-softOrange">Business & Product</h3>
-            <ul class="list-disc ml-4">
-              <li>How will this make money?</li>
-              <li>What’s the business model?</li>
-              <li>Who is the target user?</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-softOrange">Cybersecurity</h3>
-            <ul class="list-disc ml-4">
-              <li>What data is collected?</li>
-              <li>Are there privacy risks?</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-softOrange">AI & ML</h3>
-            <ul class="list-disc ml-4">
-              <li>Where does AI fit into this?</li>
-              <li>Is this an AI-powered recommender?</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="font-semibold text-softOrange">UX & Design</h3>
-            <ul class="list-disc ml-4">
-              <li>Why this flow?</li>
-              <li>Why semantic color systems?</li>
-            </ul>
-          </div>
+        <div>
+          <p class="font-bold">Trust Calibration</p>
+          <p class="opacity-70 text-xs">Value transparency: We don't just give a safety score; we explain <em>why</em> (e.g., 'Well-lit entrance').</p>
         </div>
-      </section>
+      </div>
+    </div>
 
+    <div class="space-y-4">
+      <h3 class="text-sm font-bold text-[#5B3E31] border-b pb-1">Solving the "AI Failure" Patterns</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 rounded-xl border border-gray-100">
+          <p class="text-xs font-bold text-red-600">AI Failure: Flat Hierarchy</p>
+          <p class="text-[11px] mt-1 italic">"Everything is on the top level because it's easier to prompt."</p>
+          <p class="text-[11px] mt-2 font-bold text-green-700">Our Fix: Nested IA</p>
+          <p class="text-[11px] opacity-70">Information is grouped by 'Mental Model' (Discovery -> Evaluation -> Safety), not just technical convenience.</p>
+        </div>
+
+        <div class="p-4 rounded-xl border border-gray-100">
+          <p class="text-xs font-bold text-red-600">AI Failure: Micro-interaction only</p>
+          <p class="text-[11px] mt-1 italic">"Showing a spinner but not explaining the result."</p>
+          <p class="text-[11px] mt-2 font-bold text-green-700">Our Fix: Certainty Feedback</p>
+          <p class="text-[11px] opacity-70">Focusing on the UX component: "Did that work? Is this safe?" through persistent state updates.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-4 bg-blue-50/50 rounded-xl border border-blue-100">
+      <h4 class="text-xs font-bold text-blue-800">System Learnability vs. User Learning</h4>
+      <p class="text-xs opacity-80 mt-1">
+        Instead of the user learning a complex interface, the system uses <strong>Adaptive/Predictive flows</strong> that learn the user's vibe and safety comfort levels through recurring interactions.
+      </p>
+    </div>
+
+    <div class="p-4 bg-orange-50/50 border border-orange-100 rounded-xl">
+      <h4 class="text-xs font-bold text-orange-600 uppercase">Retail → UX Mapping</h4>
+      <p class="text-xs opacity-80 mt-1">
+        My retail workflow directly shaped the UX logic: 
+        Inspect → Awareness, Wrap & Seal → Evaluation, Label → Action, Clean → Reset. 
+        This ensures the product mirrors real-world decision support and safety communication.
+      </p>
     </div>
   </div>
-</div>
+</section>

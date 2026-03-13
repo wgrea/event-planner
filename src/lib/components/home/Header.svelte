@@ -1,7 +1,10 @@
 <!-- src/lib/components/home/Header.svelte -->
 <header class="text-center mb-10">
-  <div class="inline-block mb-3">
-    <h1 class="text-3xl font-bold text-vibe-brown">Vespera</h1>
-    <div class="h-1.5 w-12 bg-[#FFEDD5] mx-auto mt-2 rounded-full shadow-sm"></div>
-  </div>
+  <img 
+    src="/vesperalogo.png" 
+    alt="Vespera Logo" 
+    class="mx-auto h-24 w-auto mb-6 drop-shadow-md"
+  />
+
+  <div class="h-1.5 w-12 bg-[#FFEDD5] mx-auto rounded-full shadow-sm"></div>
 </header>

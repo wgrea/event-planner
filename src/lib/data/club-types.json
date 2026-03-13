@@ -29,6 +29,7 @@
     "name": "Rave / Electronic Music Event",
     "slug": "rave-electronic-event",
     "type": "club",
+    "global_availability": "regional",
     "is_dance": true,
     "vibe": ["industrial", "neon", "maximalist", "unfiltered"],
     "music_identity": ["techno", "trance", "hardstyle", "drum and bass"],
@@ -81,5 +82,132 @@
       "Look for themed nights (e.g., Holi or Diwali) for the best experience",
       "Stay near the lighting booth for the best view of the dancers"
     ]
+  },
+  {
+    "id": "top-40-club",
+    "name": "Top 40 / Mainstream Club",
+    "slug": "top-40-club",
+    "type": "club",
+    "global_availability": "widespread",
+    "is_dance": true,
+    "vibe": ["commercial", "polished", "predictable", "flashy"],
+    "music_identity": ["pop", "hip-hop", "charts"],
+    "interaction_intensity": {
+      "level": "moderate-high",
+      "label": "Socially Charged",
+      "description": "Highly performative; there is often a 'see and be seen' atmosphere that can feel isolating for solo guests."
+    },
+    "social_expectations": "Group-heavy environment; dress codes are usually strictly enforced.",
+    "solo_comfort": 5,
+    "solo_tips": ["The bar is your safe haven; bartenders here are used to solo guests waiting for friends.", "Look for clubs with a 'patio' area where the music is lower and conversation is easier."],
+    "safety_factors": {
+      "level": "moderate-high",
+      "label": "Moderate-High Risk",
+      "description": "High alcohol consumption and aggressive bouncers; keep a close eye on your drink."
+    },
+    "physical_proximity": "Extreme on the dance floor; high friction in bottle-service areas.",
+    "recommendations": ["Check the dress code on Instagram before going", "Pre-book a ride home to avoid the 2 AM surge"]
+  },
+  {
+    "id": "k-pop-night",
+    "name": "K-Pop Night",
+    "slug": "k-pop-night",
+    "type": "club",
+    "global_availability": "regional",
+    "is_dance": true,
+    "is_cultural": true,
+    "vibe": ["vibrant", "coordinated", "enthusiastic", "welcoming"],
+    "music_identity": ["k-pop", "k-hip-hop"],
+    "interaction_intensity": {
+      "level": "moderate",
+      "label": "Fan-Driven Social",
+      "description": "Shared fandom lowers the barrier to entry. Expect people to dance in sync or cheer for specific music video moments."
+    },
+    "social_expectations": "High energy and mutual respect; often feels more like a convention than a dark club.",
+    "solo_comfort": 9,
+    "solo_tips": ["If you know the 'fan chants' or choreography, join in! It's the ultimate icebreaker.", "Carry a lightstick if you have one; it’s a beacon for other solo fans."],
+    "safety_factors": {
+      "level": "low",
+      "label": "Low Risk",
+      "description": "Community-focused events with generally lower levels of aggressive intoxication."
+    },
+    "physical_proximity": "Moderate-High; coordinated group dancing requires some 'elbow room'.",
+    "recommendations": ["Check if there is a 'random play dance' segment", "Bring tradeable fan-made items (freebies) to meet people"]
+  },
+  {
+    "id": "afrobeats-night",
+    "name": "Afrobeats Night",
+    "slug": "afrobeats-night",
+    "type": "club",
+    "global_availability": "regional",
+    "is_dance": true,
+    "is_cultural": true,
+    "vibe": ["rhythmic", "soulful", "stylish", "unapologetic"],
+    "music_identity": ["afrobeats", "amapiano", "dancehall"],
+    "interaction_intensity": {
+      "level": "moderate-high",
+      "label": "Rhythmic Engagement",
+      "description": "The music is designed for movement. Socializing is fluid and often happens through shared rhythm on the floor."
+    },
+    "social_expectations": "High emphasis on style and 'vibe'; inclusive but high-energy.",
+    "solo_comfort": 8,
+    "solo_tips": ["Don't be afraid to dance alone; the music is the centerpiece and everyone is focused on the 'groove'.", "Finding a spot near the DJ booth often puts you in the center of the best energy."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Standard Nightlife Risk",
+      "description": "Crowded dance floors and dim lighting; standard awareness is required."
+    },
+    "physical_proximity": "High; constant rhythmic movement in close quarters.",
+    "recommendations": ["Wear comfortable but stylish shoes", "Arrive late—the vibe usually peaks after midnight"]
+  },
+  {
+    "id": "house-techno-room",
+    "name": "House / Techno Room",
+    "slug": "house-techno-room",
+    "type": "club",
+    "global_availability": "widespread",
+    "is_dance": true,
+    "vibe": ["minimalist", "dark", "steady", "hypnotic"],
+    "music_identity": ["deep house", "minimal techno", "tech-house"],
+    "interaction_intensity": {
+      "level": "low",
+      "label": "Internalized Focus",
+      "description": "Very low pressure to interact. The steady 4/4 beat allows for a 'meditative' solo dance experience."
+    },
+    "social_expectations": "Anonymity is respected; talking on the dance floor is often frowned upon.",
+    "solo_comfort": 10,
+    "solo_tips": ["The 'dark corner' or the rail right in front of the DJ is perfect for solo immersion.", "Let the rhythm take over; no one is judging your moves in a techno room."],
+    "safety_factors": {
+      "level": "low-moderate",
+      "label": "Controlled Environment",
+      "description": "Often more 'serious' music fans; lower aggression but watch for fatigue from long sets."
+    },
+    "physical_proximity": "Moderate; people usually respect a 'personal bubble' for dancing.",
+    "recommendations": ["Check the lineup for specific sub-genres", "Bring a fan for crowded, poorly ventilated rooms"]
+  },
+  {
+    "id": "nightclub-style-bar",
+    "name": "Nightclub-Style Bar (Lounge)",
+    "slug": "nightclub-style-bar",
+    "type": "bar",
+    "global_availability": "widespread",
+    "is_dance": true,
+    "vibe": ["hybrid", "dimly-lit", "social", "transitional"],
+    "music_identity": ["house", "remixes", "open-format"],
+    "interaction_intensity": {
+      "level": "moderate",
+      "label": "Fluid Pressure",
+      "description": "Easier than a club but more intense than a bar. You can choose to be a spectator at a table or a participant on the small floor."
+    },
+    "social_expectations": "A mix of 'chilling' and 'partying'; more 'mingle-friendly' than a standard club.",
+    "solo_comfort": 8,
+    "solo_tips": ["Claim a spot at the bar rail to maintain a 'home base' while watching the dance floor.", "Great for 'club-light' energy without the commitment of a full venue."],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Moderate Risk",
+      "description": "High foot traffic in small spaces can lead to spills and accidental bumps."
+    },
+    "physical_proximity": "High near the bar and floor; moderate in seating areas.",
+    "recommendations": ["Look for venues with no cover charge", "Great for a 'warm-up' before a bigger event"]
   }
 ]
