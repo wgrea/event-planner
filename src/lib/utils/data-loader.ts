@@ -1,6 +1,5 @@
-// src/routes/drinks/[id]/+page.server.ts
-import type { PageServerLoad } from './$types';
-import { error } from '@sveltejs/kit';
+// src/lib/utils/data-loader.ts
+// Create a centralized data loader to avoid repetition
 import beer from '$lib/data/drinks/beer.json';
 import wine from '$lib/data/drinks/wine.json';
 import spirits from '$lib/data/drinks/spirits.json';
@@ -9,10 +8,8 @@ import fermented from '$lib/data/drinks/fermented-traditional.json';
 import nonAlcoholic from '$lib/data/drinks/non-alcoholic.json';
 import globalBrands from '$lib/data/drinks/global.json';
 
-export const load: PageServerLoad = async ({ params }) => {
-  const { id } = params;
-  
-  const allDrinks = [
+export function loadAllDrinks() {
+  return [
     ...(beer as any[]),
     ...(wine as any[]),
     ...(spirits as any[]),
@@ -21,13 +18,4 @@ export const load: PageServerLoad = async ({ params }) => {
     ...(nonAlcoholic as any[]),
     ...(globalBrands as any[])
   ];
-
-  const drink = allDrinks.find(d => d.id === id);
-
-  if (!drink) {
-    console.error(`Drink ID "${id}" not found in database.`);
-    throw error(404, { message: 'Drink not found' });
-  }
-
-  return { drink };
-};
+}
