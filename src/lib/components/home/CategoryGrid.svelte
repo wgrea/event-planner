@@ -7,19 +7,8 @@
   export let clubTypes: ClubType[];
 </script>
 
-<section class="space-y-6">
-<a 
-  href="/drinks" 
-  class="block w-full text-center bg-[#fcdab7] text-vibe-brown font-bold py-3 rounded-lg border border-orange-300 shadow-sm transition-transform hover:scale-[1.02]"
->
-  Explore the Full Global Drinks Database
-</a>
-
- <p class="text-sm text-vibe-brown/70 mb-4 text-center max-w-md mx-auto">
-    Explore global drinks and the social spaces around them — bars, events, and clubs — even when not every event involves alcohol.
-  </p>
-
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<section class="mt-12">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     <a href="/bars" class="flex items-center space-x-4 bg-green-50 border border-green-200 p-4 rounded-xl hover:scale-[1.02] transition-transform">
       <span class="text-3xl" aria-hidden="true">🍸</span>
       <div>
