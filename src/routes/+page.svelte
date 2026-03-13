@@ -30,7 +30,7 @@
 </script>
 
 <div class="min-h-screen bg-[#fcdab7] p-6">
-  <div class="max-w-xl mx-auto bg-white rounded-xl shadow-md p-6 space-y-10">
+  <div class="max-w-xl mx-auto bg-white rounded-xl shadow-md p-6 space-y-4">
 
     <Header />
     <CategoryGrid {barTypes} {eventTypes} {clubTypes} />
