@@ -92,5 +92,5 @@ function listFiles(dir, indent = '') {
   }
 }
 
-console.log('🚀 Travel Planner Project Structure:\n');
+console.log('Social-Drinks Explorer Project Structure:\n');
 listFiles('.');
