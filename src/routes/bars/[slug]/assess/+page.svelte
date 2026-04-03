@@ -1,7 +1,6 @@
 <!-- src/routes/bars/[slug]/assess/+page.svelte -->
 <script lang="ts">
   import AssessLayout from '$lib/components/safety/AssessLayout.svelte';
-  import SafetyCard from '$lib/components/safety/Card.svelte';
   import BarDetails from '$lib/components/safety/BarDetails.svelte';
   import { calculateRisk } from '$lib/utils/safety';
 
