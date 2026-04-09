@@ -93,9 +93,25 @@
   </ul>
 </SafetyCard>
 
-{#if bar.physical_proximity}
-  <div class="mt-4 px-4 py-3 bg-[#fcdab7]/20 rounded-lg border border-[#fcdab7]/40">
-    <p class="text-[10px] uppercase tracking-widest text-vibe-brown/60 font-bold mb-1">Physical Proximity</p>
-    <p class="text-xs text-vibe-brown/80 leading-snug font-medium">{bar.physical_proximity}</p>
+{#if bar.physical_proximity || bar.availability_ambiguity}
+  <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+    {#if bar.physical_proximity}
+      <div class="px-4 py-3 bg-[#fcdab7]/20 rounded-lg border border-[#fcdab7]/40">
+        <p class="text-[10px] uppercase tracking-widest text-vibe-brown/60 font-bold mb-1">Physical Proximity</p>
+        <p class="text-xs text-vibe-brown/80 leading-snug font-medium">{bar.physical_proximity}</p>
+      </div>
+    {/if}
+
+    {#if bar.availability_ambiguity}
+      <div class="px-4 py-3 bg-purple-50 rounded-lg border border-purple-100">
+        <p class="text-[10px] uppercase tracking-widest text-purple-600 font-bold mb-1">Availability Ambiguity</p>
+        <p class="text-xs text-purple-800 leading-snug font-medium capitalize">
+          {bar.availability_ambiguity.replace('-', ' ')}
+        </p>
+        {#if bar.availability_ambiguity === 'low'}
+          <p class="text-[9px] text-purple-500 italic mt-1">Note: Explicitly singles-friendly environment.</p>
+        {/if}
+      </div>
+    {/if}
   </div>
 {/if}

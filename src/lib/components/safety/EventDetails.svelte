@@ -93,9 +93,46 @@
   </ul>
 </SafetyCard>
 
-{#if event.physical_proximity || event.touch_level}
-  <div class="mt-4 px-4 py-3 bg-[#fcdab7]/20 rounded-lg border border-[#fcdab7]/40">
-    <p class="text-[10px] uppercase tracking-widest text-vibe-brown/60 font-bold mb-1">Physical Proximity</p>
-    <p class="text-xs text-vibe-brown/80 leading-snug font-medium">{event.physical_proximity}</p>
+{#if event.physical_proximity || event.availability_ambiguity}
+  <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+    {#if event.physical_proximity}
+      <div class="px-4 py-3 bg-[#fcdab7]/20 rounded-lg border border-[#fcdab7]/40">
+        <p class="text-[10px] uppercase tracking-widest text-vibe-brown/60 font-bold mb-1">Physical Proximity</p>
+        <p class="text-xs text-vibe-brown/80 leading-snug font-medium">{event.physical_proximity}</p>
+      </div>
+    {/if}
+
+    {#if event.availability_ambiguity}
+      <div class="px-4 py-3 bg-purple-50 rounded-lg border border-purple-100">
+        <p class="text-[10px] uppercase tracking-widest text-purple-600 font-bold mb-1">Availability Ambiguity</p>
+        <p class="text-xs text-purple-800 leading-snug font-medium capitalize">
+          {event.availability_ambiguity.replace('-', ' ')}
+        </p>
+        {#if event.availability_ambiguity === 'low'}
+          <p class="text-[9px] text-purple-500 italic mt-1">Note: Likely a singles-targeted event.</p>
+        {/if}
+      </div>
+    {/if}
+  </div>
+{/if}
+
+{#if event.variants}
+  <div class="mt-6 border-t pt-4">
+    <p class="text-[10px] font-bold uppercase tracking-widest text-vibe-brown/50 mb-3">Known Variations</p>
+    <div class="space-y-2">
+      {#each event.variants as variant}
+        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-100 shadow-sm">
+          <div>
+            <p class="text-sm font-bold text-vibe-brown">{variant.name}</p>
+            <p class="text-[10px] text-gray-500">{variant.occurrence_note}</p>
+          </div>
+          <div class="text-right">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-purple-100 text-purple-700">
+              {variant.ambiguity} Ambiguity
+            </span>
+          </div>
+        </div>
+      {/each}
+    </div>
   </div>
 {/if}

@@ -36,6 +36,7 @@
       "label": "Moderate-High Risk",
       "description": "Moderate-high due to rapid venue transitions and the likelihood of getting separated from the main group."
     },
+    "availability_ambiguity": "low-moderate",
     "physical_proximity": "Frequent contact during transitions and while moving through narrow doors.",
     "recommendations": [
       "Set a meeting point with a friend if you get separated", 
@@ -76,6 +77,7 @@
       "label": "Low Risk",
       "description": "Low risk; professional environment with clear boundaries and instruction."
     },
+    "availability_ambiguity": "low-moderate",
     "physical_proximity": "High; requires direct hand/arm contact during the lesson.",
     "recommendations": ["Focus on the steps first to reduce social 'noise'", "Hydrate—it's more of a workout than it looks."]
   },
@@ -158,6 +160,19 @@
       "label": "Low Risk",
       "description": "Generally respectful community, though close physical contact requires clear personal boundaries."
     },
+    "availability_ambiguity": "high",
+  "variants": [
+    {
+      "name": "Singles-Only Mixer",
+      "ambiguity": "low",
+      "occurrence_note": "Commonly hosted once a month as a dedicated event."
+    },
+    {
+      "name": "Pre-Social Rotation Lesson",
+      "ambiguity": "low-moderate",
+      "occurrence_note": "Happens 1 hour before the main social starts."
+    }
+  ],
     "physical_proximity": "Very high; chest-to-chest or hand-to-hand contact is standard.",
     "recommendations": ["Prioritize personal hygiene (mints/deodorant)", "Wear shoes with suede or smooth soles"]
   },
@@ -197,6 +212,7 @@
       "label": "Close Contact Risk",
       "description": "Low physical danger, but the level of intimacy requires high comfort with personal space."
     },
+    "availability_ambiguity": "high",
     "physical_proximity": "Maximum; often involves a 'temple-to-temple' connection.",
     "recommendations": ["Focus on your breath to stay relaxed during close dances"]
   },
@@ -237,6 +253,19 @@
       "label": "Moderate Risk",
       "description": "Risk of being stepped on or elbowed during fast turns in a crowded room."
     },
+    "availability_ambiguity": "high",
+  "variants": [
+    {
+      "name": "Singles-Only Salsa Mixer",
+      "ambiguity": "low",
+      "occurrence_note": "A dedicated event where relationship status is the primary entry filter."
+    },
+    {
+      "name": "Pre-Social Rotation Lesson",
+      "ambiguity": "low-moderate",
+      "occurrence_note": "The first 60 minutes of the night; partner rotation is enforced by the instructor."
+    }
+  ],
     "physical_proximity": "High; constant movement and spinning in a defined 'slot'.",
     "recommendations": ["Watch your elbows in tight spaces", "Stay hydrated between fast sets"]
   },
@@ -274,6 +303,7 @@
       "label": "Physical Risk",
       "description": "Kicks and 'aerials' (if allowed) can cause accidental contact."
     },
+    "availability_ambiguity": "moderate",
     "physical_proximity": "Moderate; arms-length to close-hold, but with lots of dynamic movement.",
     "recommendations": ["Avoid 'aerial' moves unless you have a designated partner"]
   },
@@ -311,6 +341,7 @@
       "label": "High Crowd Risk",
       "description": "Heat exhaustion, crowd-surge, and long distances between exits."
     },
+    "availability_ambiguity": "high",
     "physical_proximity": "Extreme in the 'pit'; spacious in the 'lawn' or back sections.",
     "recommendations": ["Take a photo of the parking section or shuttle stop", "Use the 'buddy system' with a remote contact (check-ins)"]
   },
@@ -349,6 +380,7 @@
       "label": "Low Risk",
       "description": "Generally safe, public locations; keep an eye on your laptop/tech bag if bringing work gear."
     },
+    "availability_ambiguity": "low-moderate",
     "physical_proximity": "Moderate; typical of a crowded cafe or hotel lobby.",
     "recommendations": ["Have a digital business card or QR code ready", "Don't feel pressured to stay if the 'career talk' gets too heavy"]
   },
@@ -387,6 +419,7 @@
       "label": "Low Risk",
       "description": "Drug and alcohol-free environments; high emphasis on 'consent' and personal space."
     },
+    "availability_ambiguity": "high",
     "physical_proximity": "Variable; can range from wide-open space to intense, swirling crowds.",
     "recommendations": ["Bring a reusable water bottle", "Wear layers—you will get hot, then cool down quickly"]
   },
@@ -573,6 +606,7 @@
       "label": "Moderate Risk",
       "description": "Emotions can run high during losses; watch out for spilled drinks and exuberant physical movements."
     },
+    "availability_ambiguity": "moderate",
     "physical_proximity": "High density; often shoulder-to-shoulder during 'Big Games'."
   },
   {

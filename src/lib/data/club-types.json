@@ -32,6 +32,7 @@
       "label": "High Risk",
       "description": "High sensory intensity and crowd-crush potential during headliner sets."
     },
+    "availability_ambiguity": "high",
     "physical_proximity": "Constant incidental contact; very high density on the main floor.",
     "recommendations": ["Locate the free water station immediately", "Identify two exit routes"]
   },
@@ -68,6 +69,7 @@
       "label": "High Sensory Risk",
       "description": "Extreme volume and strobe lighting; potential for dehydration in high-density areas."
     },
+    "availability_ambiguity": "moderate",
     "physical_proximity": "Variable; tight on the floor, but usually spacious at the perimeter.",
     "recommendations": ["Invest in high-fidelity earplugs", "Hydrate at least 20oz of water per hour of dancing"]
   },
@@ -110,6 +112,14 @@
       "label": "Moderate Risk",
       "description": "Large crowds and high-decibel music; standard nightlife precautions apply."
     },
+"availability_ambiguity": "moderate-high",
+  "variants": [
+    {
+      "name": "Bhangra/Choreo Workshop Night",
+      "ambiguity": "low-moderate",
+      "occurrence_note": "A pre-party session where everyone learns the hook-step together."
+    }
+  ],
     "physical_proximity": "High; vibrant and crowded dance floors.",
     "recommendations": [
       "Look for themed nights (e.g., Holi or Diwali) for the best experience",
@@ -150,6 +160,7 @@
       "label": "Moderate-High Risk",
       "description": "High alcohol consumption and aggressive bouncers; keep a close eye on your drink."
     },
+    "availability_ambiguity": "high",
     "physical_proximity": "Extreme on the dance floor; high friction in bottle-service areas.",
     "recommendations": ["Check the dress code on Instagram before going", "Pre-book a ride home to avoid the 2 AM surge"]
   },
@@ -187,6 +198,14 @@
       "label": "Low Risk",
       "description": "Community-focused events with generally lower levels of aggressive intoxication."
     },
+"availability_ambiguity": "moderate",
+  "variants": [
+    {
+      "name": "Choreo/Lightstick Meetup",
+      "ambiguity": "low-moderate",
+      "occurrence_note": "Focuses on shared performance; fans are highly approachable."
+    }
+  ],
     "physical_proximity": "Moderate-High; coordinated group dancing requires some 'elbow room'.",
     "recommendations": ["Check if there is a 'random play dance' segment", "Bring tradeable fan-made items (freebies) to meet people"]
   },
@@ -225,6 +244,7 @@
       "label": "Standard Nightlife Risk",
       "description": "Crowded dance floors and dim lighting; standard awareness is required."
     },
+    "availability_ambiguity": "high",
     "physical_proximity": "High; constant rhythmic movement in close quarters.",
     "recommendations": ["Wear comfortable but stylish shoes", "Arrive late—the vibe usually peaks after midnight"]
   },
@@ -261,6 +281,7 @@
       "label": "Controlled Environment",
       "description": "Often more 'serious' music fans; lower aggression but watch for fatigue from long sets."
     },
+    "availability_ambiguity": "high",
     "physical_proximity": "Moderate; people usually respect a 'personal bubble' for dancing.",
     "recommendations": ["Check the lineup for specific sub-genres", "Bring a fan for crowded, poorly ventilated rooms"]
   },
@@ -298,7 +319,47 @@
       "label": "Moderate Risk",
       "description": "High foot traffic in small spaces can lead to spills and accidental bumps."
     },
+    "availability_ambiguity": "moderate-high",
     "physical_proximity": "High near the bar and floor; moderate in seating areas.",
     "recommendations": ["Look for venues with no cover charge", "Great for a 'warm-up' before a bigger event"]
-  }
+  },
+{
+  "id": "sundown-day-party",
+  "name": "Sundown Day Party",
+  "slug": "sundown-day-party",
+  "type": "club",
+  "is_dance": true,
+  "is_fluid": true,
+  "global_availability": "regional",
+  "vibe": ["Acoustic-Electronic", "Open-Air", "High-Energy", "Mature"],
+  "music_identity": ["House", "Organic Electronic", "Techno"],
+  "interaction_intensity": {
+    "level": "low-moderate",
+    "label": "Music-Focused",
+    "description": "Conversation is optional; shared appreciation for the production is the primary driver."
+  },
+  "availability_ambiguity": "moderate-high",
+  "physical_proximity": "Moderate (Dance floor spacing)",
+  "social_expectations": "Mature crowd; higher ratio of individuals there for the music than for 'hunting' social status.",
+
+  "solo_comfort": 8,
+  "solo_tips": [
+    "Arrive early to enjoy the transition from daylight to sunset.",
+    "Position yourself near the sound booth for the best acoustic experience."
+  ],
+  "safety_factors": {
+    "level": "low",
+    "label": "Low Risk",
+    "description": "Daylight visibility and a more mature crowd generally lead to a safer environment."
+  },
+  "budget_tips": [
+    "Sunscreen and hydration are the hidden costs of day parties.",
+    "Check for 'Early Bird' tickets as these events often sell out by afternoon."
+  ],
+  "recommendations": [
+    "Check for venue 'Sunset' timing",
+    "Ear protection recommended",
+    "Wear breathable fabrics"
+  ]
+}
 ]

@@ -300,5 +300,85 @@
     },
     "physical_proximity": "High; constant movement and close-quarters dancing.",
     "recommendations": ["Check if there is a cover charge before you arrive", "Arrive after 11 PM for the peak vibe"]
-  }
+  },
+  {
+  "id": "accommodation-bar",
+  "name": "Accommodation / Hostel Bar",
+  "slug": "accommodation-bar",
+  "type": "bar",
+  "global_availability": "widespread",
+  "is_lounce": true,
+  "vibe": ["transient", "open", "social", "unpretentious"],
+  "interaction_intensity": {
+    "level": "low-moderate",
+    "label": "Passive Social",
+    "description": "High volume of solo patrons; social interaction is the default setting."
+  },
+  "economic_vibe": "inclusive",
+  "pacing_cost_factor": 2,
+  "spending_rhythm": "nursing",
+  "seasonal_context": {
+    "peak_note": "Summer backpacking season increases the crowd density.",
+    "off_peak_note": "Quieter, more digital-nomad focused in the winter months.",
+    "volatility": "stable"
+  },
+  "budget_tips": ["Often has a 'Happy Hour' specifically for residents/guests.", "Cheaper than standard city bars due to the target demographic."],
+  "social_dynamics": "Solo-heavy; communal seating; very high openness to strangers.",
+  "typical_drinks": ["Local Beer", "Simple Spirits", "Canned Beverages"],
+  "solo_comfort": 10,
+  "solo_tips": ["Sitting at a communal table is a universal 'invite me' signal.", "Ask about travel plans as the standard opener."],
+  "safety_factors": {
+    "level": "low",
+    "label": "Secure Environment",
+    "description": "Usually has front-desk security and a consistent flow of staff."
+  },
+  "physical_proximity": "High at communal tables; low in lounge corners.",
+  "availability_ambiguity": "low-moderate",
+  "recommendations": ["Look for 'Selina' or 'Generator' style brands locally", "Great for 'warm-up' social skills"]
+},
+{
+  "id": "activity-first-bar",
+  "name": "Activity-First Bar (Social Gaming)",
+  "slug": "activity-first-bar",
+  "type": "bar",
+  "global_availability": "widespread",
+  "is_lounge": false,
+  "is_fluid": true,
+  "vibe": ["competitive", "high-energy", "structured", "interactive"],
+  "interaction_intensity": {
+    "level": "moderate-high",
+    "label": "Task-Oriented",
+    "description": "Socializing is secondary to the game (Darts, Ping Pong, Arcade). Interactions are naturally forced by gameplay turns."
+  },
+  "economic_vibe": "standard",
+  "pacing_cost_factor": 4,
+  "spending_rhythm": "sporadic",
+  "seasonal_context": {
+    "peak_note": "Peak demand on Friday/Saturday nights; lane or table reservations are often required.",
+    "off_peak_note": "Midweek evenings are ideal for solo practice or joining 'pickup' games.",
+    "volatility": "stable"
+  },
+  "budget_tips": [
+    "Check for 'unlimited play' wristbands on off-peak nights to save on individual game fees.",
+    "Group play is cheaper; solo players should look for 'free play' arcade sections."
+  ],
+  "social_dynamics": "High group-to-group interaction; the 'spectator' culture makes it easy to comment on others' play.",
+  "typical_drinks": ["Draft Beer", "Highballs", "Energy-focused Cocktails"],
+  "solo_comfort": 7,
+  "solo_tips": [
+    "Position yourself at the spectator rail of a popular game to make casual commentary.",
+    "Barcades are better for solo play than reservation-heavy spots like social darts or bowling."
+  ],
+  "safety_factors": {
+    "level": "low",
+    "label": "Low Risk",
+    "description": "Focus on games often reduces the 'aggressive' social energy found in standard clubs."
+  },
+  "physical_proximity": "Moderate around gameplay; high at the bar and spectator zones.",
+  "availability_ambiguity": "low-moderate",
+  "recommendations": [
+    "Search for 'Barcades' or 'Social Darts' in your local area",
+    "Arrive during off-peak hours to meet regulars"
+  ]
+}
 ]
