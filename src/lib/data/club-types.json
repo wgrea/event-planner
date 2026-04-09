@@ -1,4 +1,57 @@
 [
+    {
+    "id": "bollywood-club-night",
+    "name": "Bollywood Club Night",
+    "slug": "bollywood-club-night",
+    "type": "club",
+    "global_availability": "rare",
+    "is_cultural": true,
+    "vibe": ["glamorous", "high-production", "maximalist", "joyful"],
+    "music_identity": ["bollywood", "urban desi", "edm-fusion"],
+    "interaction_intensity": {
+      "level": "moderate-high",
+      "label": "Group-Centric",
+      "description": "High energy on the floor. While groups are common, solo attendees can easily blend into the collective choreography."
+    },
+    "economic_vibe": "premium",
+    "pacing_cost_factor": 3,
+    "spending_rhythm": "steady",
+    "seasonal_context": {
+      "peak_note": "Diwali and Holi themed nights see peak attendance and 'Premium Ticket' requirements.",
+      "off_peak_note": "Standard monthly socials are more predictable and spacious.",
+      "volatility": "event-driven"
+    },
+    "budget_tips": [
+      "Group-sharing a 'Pitcher' or bottle (if safe) is often more cost-effective than individual complex cocktails.",
+      "Check if your ticket includes a 'Welcome Drink' to save on your first round."
+    ],
+    "social_dynamics": "Performative and celebratory; heavy focus on dancing and fashion.",
+    "social_expectations": "Expressive dancing, group energy, and fashion-forward presentation.",
+    "typical_drinks": ["Cocktails", "Beer", "Mocktails"],
+    "solo_comfort": 7,
+    "solo_tips": [
+      "The dance floor 'circle' is where the action is—standing on the fringe lets you watch before jumping in.",
+      "Complimenting someone’s outfit is the fastest way to make a 'night-only' friend."
+    ],
+    "safety_factors": {
+      "level": "moderate",
+      "label": "Moderate Risk",
+      "description": "Large crowds and high-decibel music; standard nightlife precautions apply."
+    },
+"availability_ambiguity": "moderate-high",
+  "variants": [
+    {
+      "name": "Bhangra/Choreo Workshop Night",
+      "ambiguity": "low-moderate",
+      "occurrence_note": "A pre-party session where everyone learns the hook-step together."
+    }
+  ],
+    "physical_proximity": "High; vibrant and crowded dance floors.",
+    "recommendations": [
+      "Look for themed nights (e.g., Holi or Diwali) for the best experience",
+      "Stay near the lighting booth for the best view of the dancers"
+    ]
+  },
   {
     "id": "edm-club",
     "name": "EDM Club",
@@ -72,59 +125,6 @@
     "availability_ambiguity": "moderate",
     "physical_proximity": "Variable; tight on the floor, but usually spacious at the perimeter.",
     "recommendations": ["Invest in high-fidelity earplugs", "Hydrate at least 20oz of water per hour of dancing"]
-  },
-  {
-    "id": "bollywood-club-night",
-    "name": "Bollywood Club Night",
-    "slug": "bollywood-club-night",
-    "type": "club",
-    "global_availability": "rare",
-    "is_cultural": true,
-    "vibe": ["glamorous", "high-production", "maximalist", "joyful"],
-    "music_identity": ["bollywood", "urban desi", "edm-fusion"],
-    "interaction_intensity": {
-      "level": "moderate-high",
-      "label": "Group-Centric",
-      "description": "High energy on the floor. While groups are common, solo attendees can easily blend into the collective choreography."
-    },
-    "economic_vibe": "premium",
-    "pacing_cost_factor": 3,
-    "spending_rhythm": "steady",
-    "seasonal_context": {
-      "peak_note": "Diwali and Holi themed nights see peak attendance and 'Premium Ticket' requirements.",
-      "off_peak_note": "Standard monthly socials are more predictable and spacious.",
-      "volatility": "event-driven"
-    },
-    "budget_tips": [
-      "Group-sharing a 'Pitcher' or bottle (if safe) is often more cost-effective than individual complex cocktails.",
-      "Check if your ticket includes a 'Welcome Drink' to save on your first round."
-    ],
-    "social_dynamics": "Performative and celebratory; heavy focus on dancing and fashion.",
-    "social_expectations": "Expressive dancing, group energy, and fashion-forward presentation.",
-    "typical_drinks": ["Cocktails", "Beer", "Mocktails"],
-    "solo_comfort": 7,
-    "solo_tips": [
-      "The dance floor 'circle' is where the action is—standing on the fringe lets you watch before jumping in.",
-      "Complimenting someone’s outfit is the fastest way to make a 'night-only' friend."
-    ],
-    "safety_factors": {
-      "level": "moderate",
-      "label": "Moderate Risk",
-      "description": "Large crowds and high-decibel music; standard nightlife precautions apply."
-    },
-"availability_ambiguity": "moderate-high",
-  "variants": [
-    {
-      "name": "Bhangra/Choreo Workshop Night",
-      "ambiguity": "low-moderate",
-      "occurrence_note": "A pre-party session where everyone learns the hook-step together."
-    }
-  ],
-    "physical_proximity": "High; vibrant and crowded dance floors.",
-    "recommendations": [
-      "Look for themed nights (e.g., Holi or Diwali) for the best experience",
-      "Stay near the lighting booth for the best view of the dancers"
-    ]
   },
   {
     "id": "top-40-club",
@@ -328,8 +328,6 @@
   "name": "Sundown Day Party",
   "slug": "sundown-day-party",
   "type": "club",
-  "is_dance": true,
-  "is_fluid": true,
   "global_availability": "regional",
   "vibe": ["Acoustic-Electronic", "Open-Air", "High-Energy", "Mature"],
   "music_identity": ["House", "Organic Electronic", "Techno"],

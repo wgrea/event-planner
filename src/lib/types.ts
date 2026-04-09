@@ -86,15 +86,10 @@ export type Drink = {
 // ============= VENUE TYPES =============
 
 export interface InteractionIntensity {
-  level: PressureLevel;      // "low" | "moderate" | "high" | etc.
-  label: string;             // UI-friendly label
-  description: string;       // prose
-}
-
-export interface SafetyFactors {
-  level: 'low' | 'moderate' | 'moderate-high' | 'high';
-  label: string;             // "low intensity"
-  description: string;       // prose
+  level: PressureLevel;
+  label: string;
+  description: string;
+  boundary_note?: string; // New: Replaces "Safety Factors" prose
 }
 
 export interface BaseVenue {
@@ -102,40 +97,31 @@ export interface BaseVenue {
   name: string;
   slug: string;
   type: 'bar' | 'club' | 'event';
+// CORE FILTERS (Kept for logic)
   is_cultural?: boolean;
   is_dance?: boolean;
-  is_fluid?: boolean;  // "Nobody will see you move or leave"
-  is_lounge?: boolean; // "Couch/booth-heavy, low-energy"
-  global_availability?: GlobalAvailability;
+  is_fluid?: boolean;
+  is_lounge?: boolean;
 
-  // Analyze Page
-  vibe: string[];
+  // ANALYZE: High-Impact Social Context
   social_dynamics: string;
-  typical_drinks: string[];
-
-  // New structured fields
-  interaction_intensity: InteractionIntensity;
-  safety_factors: SafetyFactors;
-
-  // NEW: Value Evaluation (Analyze Page)
+  interaction_intensity: InteractionIntensity; // Updated
+  
+  // VALUE: Spending Rhythm (Your priority)
   economic_vibe: EconomicVibe;
-  pacing_cost_factor: number; // 1-5 (1: Slow/Nursing, 5: High Velocity)
+  pacing_cost_factor: number;
   spending_rhythm: SpendingRhythm;
+  budget_tips?: string[]; // Moved here for context
 
-  // Solo
+  // SOLO & PROXIMITY
   solo_comfort: number;
   solo_tips: string[];
-
-  // Physical Proximity
   physical_proximity: string;
 
-  // Recommendations
-  recommendations: string[];
-
-  // Optional
-  music_identity?: string[];
-  plan_night_around?: boolean;
+  // LOGISTICS
+  recommendations: string[]; // Technical/Logistical only
   cultural_notes?: string;
+  variants?: any[];
 }
 
 export type BarType = BaseVenue & { type: 'bar' };
@@ -158,16 +144,6 @@ export function isEvent(venue: Venue): venue is EventType {
 }
 
 // ============= HELPER FUNCTIONS =============
-
-// Standardized Vibe Grabber (Fixes the "No data" UI issue)
-export function getVenueVibe(venue: Venue): string[] {
-  const baseVibes = venue.vibe || [];
-  const musicTags = isClub(venue) ? (venue.music_identity || []) : [];
-  
-  const tags = [...baseVibes, ...musicTags];
-  
-  return tags.length > 0 ? tags : ["Ambient"];
-}
 
 export function getVenuePressureLevel(venue: Venue): PressureLevel {
   return venue.interaction_intensity?.level || 'low-moderate';

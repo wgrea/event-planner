@@ -76,42 +76,6 @@
     "recommendations": ["Booth seating is best for solo privacy", "Communal tables are the 'social' green light"]
   },
   {
-    "id": "sports-bar",
-    "name": "Sports Bar",
-    "slug": "sports-bar",
-    "type": "bar",
-    "global_availability": "widespread",
-    "vibe": ["loud", "competitive", "energetic", "casual"],
-    "interaction_intensity": {
-      "level": "moderate",
-      "label": "Low-Moderate Pressure",
-      "description": "Pressure is tied to the game; as long as you're watching the screen, no one questions you being solo."
-    },
-    "economic_vibe": "standard",
-    "pacing_cost_factor": 3,
-    "spending_rhythm": "steady",
-    "seasonal_context": {
-      "peak_note": "Playoff seasons cause high density and faster service pacing.",
-      "off_peak_note": "Weekday afternoons offer significant discounts and 'quiet' game viewing.",
-      "volatility": "event-driven"
-    },
-    "budget_tips": [
-      "Look for 'Pitcher' specials if you have one night-only friend; it's cheaper than single pours.",
-      "Local domestic lagers are the most predictable cost-saver here."
-    ],
-    "social_dynamics": "Group cheering/groaning; high potential for 'incidental' conversation about the game.",
-    "typical_drinks": ["Domestic Pitchers", "Wings", "Well-drinks"],
-    "solo_comfort": 9,
-    "solo_tips": ["The bar rail is the prime spot; looking at the TV is the perfect social 'shield'.", "Wear a jersey if you want people to strike up a conversation."],
-    "safety_factors": {
-      "level": "moderate",
-      "label": "Moderate Risk",
-      "description": "Can become high-intensity if the game is high-stakes; alcohol-fueled emotions run high."
-    },
-    "physical_proximity": "Close quarters during big plays; otherwise standard table spacing.",
-    "recommendations": ["Arrive 30 minutes before kickoff to snag a bar seat", "Be aware of 'rival' fans if the atmosphere gets heated."]
-  },
-  {
     "id": "hifi-listening-bar",
     "name": "Hi-Fi Listening Bar",
     "slug": "hifi-listening-bar",
